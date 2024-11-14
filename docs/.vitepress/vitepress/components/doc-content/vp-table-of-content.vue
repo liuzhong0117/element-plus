@@ -18,7 +18,7 @@ const sponsor = computed(() => sponsorLocale[lang.value])
 <template>
   <aside ref="container" class="toc-wrapper">
     <nav class="toc-content">
-      <h3 class="toc-content__heading">Contents</h3>
+      <!-- <h3 class="toc-content__heading">Contents</h3>
       <ClientOnly>
         <el-anchor :offset="70" :bound="120">
           <el-anchor-link
@@ -41,17 +41,13 @@ const sponsor = computed(() => sponsorLocale[lang.value])
           </el-anchor-link>
         </el-anchor>
       </ClientOnly>
-      <!-- <SponsorLarge
-        class="mt-8 toc-ads flex flex-col"
-        item-style="width: 180px; height: 55px;"
-      /> -->
       <p class="text-14px font-300 color-$text-color-secondary">
         {{ sponsor.sponsoredBy }}
       </p>
       <sponsors-button class="sponsors-button mt-4 w-100%" />
       <sponsor-right-big-logo-list />
       <sponsor-right-logo-small-list />
-      <sponsor-right-text-list />
+      <sponsor-right-text-list /> -->
     </nav>
   </aside>
 </template>

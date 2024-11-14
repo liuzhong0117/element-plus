@@ -41,7 +41,7 @@ const currentLink = computed(() => {
           />
         </a>
       </div>
-      <div class="content">
+      <!-- <div class="content">
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />
         <VPNavbarMenu class="menu" />
         <VPNavbarThemeToggler class="theme-toggler" />
@@ -52,7 +52,7 @@ const currentLink = computed(() => {
           class="hamburger"
           @click="$emit('toggle')"
         />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

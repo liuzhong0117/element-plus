@@ -11,9 +11,9 @@ const sponsor = computed(() => sponsorLocale[lang.value])
 
 <template>
   <div class="page-content-main-b">
-    <p class="title">{{ sponsor.sponsoredBy }}</p>
-    <VPSponsorLarge />
-    <VPSponsorSmall />
+    <!-- <p class="title">{{ sponsor.sponsoredBy }}</p> -->
+    <!-- <VPSponsorLarge /> -->
+    <!-- <VPSponsorSmall /> -->
   </div>
 </template>
 

@@ -13,15 +13,19 @@ function getGuideSidebar() {
 
 function getComponentsSideBar() {
   return Object.fromEntries(
-    Object.entries(componentLocale).map(([lang, val]) => [
-      lang,
-      Object.values(val).map((item) => mapPrefix(item, lang, '/component')),
-    ])
+    Object.entries(componentLocale).map(([lang, val]) => {
+      return [
+        lang,
+        Object.values(val).map((item) => mapPrefix(item, lang, '/component')),
+      ]
+    })
   )
 }
 
 // return sidebar with language configs.
 // this might create duplicated data but the overhead is ignorable
+// console.log('------====-------')
+// console.log(getComponentsSideBar())
 const getSidebars = () => {
   return {
     '/guide/': getGuideSidebar(),
@@ -36,6 +40,7 @@ type Item = {
 }
 
 function mapPrefix(item: Item, lang: string, prefix = '') {
+  // console.log('-----', item, lang, prefix)
   if (item.children && item.children.length > 0) {
     return {
       ...item,
@@ -44,7 +49,7 @@ function mapPrefix(item: Item, lang: string, prefix = '') {
   }
   return {
     ...item,
-    link: `${ensureLang(lang)}${prefix}${item.link}`,
+    link: `/element-plus${ensureLang(lang)}${prefix}${item.link}`,
   }
 }
 

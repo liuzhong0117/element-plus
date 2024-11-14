@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, useData } from 'vitepress'
 import { isActive } from '../../utils'
 
 import type { Link } from '../../types'
@@ -14,10 +14,7 @@ defineEmits(['close'])
 const sidebarItem = ref<HTMLElement>()
 
 const route = useRoute()
-
-const activeLink = computed<boolean>(() =>
-  isActive(route.data.relativePath, props.item.link)
-)
+const activeLink = computed<boolean>(() => isActive('element-plus/' + route.data.relativePath, props.item.link))
 
 watch([activeLink, sidebarItem], ([active, el]) => {
   if (active && el) {

@@ -45,10 +45,10 @@ languages.forEach((lang) => {
     lang,
   }
 })
-
 const config: UserConfig = {
   title: 'Element Plus',
   description: 'A Vue 3 based component library for designers and developers',
+  base: '/element-plus/',
   lastUpdated: true,
   head,
   themeConfig: {

@@ -48,8 +48,8 @@ type SidebarConfig = SidebarItem[]
 
 type Sidebar =
   | {
-      [key: string]: SidebarConfig
-    }
+    [key: string]: SidebarConfig
+  }
   | false
   | 'auto'
 

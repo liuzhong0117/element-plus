@@ -9,12 +9,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { addUnit, isUndefined } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { iconProps } from './icon'
 import type { CSSProperties } from 'vue'
-import '../../../assets/fonts/iconfont.js'
+
 
 defineOptions({
   name: 'ElIcon',
@@ -31,5 +31,9 @@ const style = computed<CSSProperties>(() => {
     fontSize: isUndefined(size) ? undefined : addUnit(size),
     '--color': color,
   }
+})
+
+onMounted(() => {
+  import('../../../assets/fonts/iconfont.js')
 })
 </script>
