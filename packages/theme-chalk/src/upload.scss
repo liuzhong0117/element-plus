@@ -36,7 +36,8 @@
   @include e(tip) {
     font-size: 12px;
     color: getCssVar('text-color', 'regular');
-    margin-top: 7px;
+    line-height: 18px;
+    margin-top: 8px;
   }
 
   iframe {

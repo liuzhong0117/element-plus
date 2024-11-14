@@ -8,14 +8,14 @@
 }
 
 @include b(date-picker) {
-  width: 322px;
+  width: 312px;
 
   &.has-sidebar.has-time {
-    width: 434px;
+    width: 424px;
   }
 
   &.has-sidebar {
-    width: 438px;
+    width: 428px;
   }
 
   &.has-time .#{$namespace}-picker-panel__body-wrapper {
@@ -23,7 +23,7 @@
   }
 
   .#{$namespace}-picker-panel__content {
-    width: 292px;
+    width: 282px;
   }
 
   table {
@@ -34,23 +34,23 @@
   @include e(editor-wrap) {
     position: relative;
     display: table-cell;
-    padding: 0 5px;
+    padding: 0 4px;
   }
 
   @include e(time-header) {
     position: relative;
     border-bottom: 1px solid getCssVar('datepicker-inner-border-color');
     font-size: 12px;
-    padding: 8px 5px 5px;
+    padding: 8px 8px;
     display: table;
     width: 100%;
     box-sizing: border-box;
   }
 
   @include e(header) {
-    margin: 12px;
+    margin: 16px;
     text-align: center;
-
+    line-height: 1;
     @include m(bordered) {
       margin-bottom: 0;
       padding-bottom: 12px;
@@ -65,8 +65,8 @@
   @include e(header-label) {
     font-size: 16px;
     font-weight: 500;
-    padding: 0 5px;
-    line-height: 22px;
+    padding: 0 2px;
+    line-height: 24px;
     text-align: center;
     cursor: pointer;
     color: getCssVar('text-color', 'regular');

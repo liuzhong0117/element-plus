@@ -134,7 +134,7 @@ const Tabs = defineComponent({
 
           nav$.value?.removeFocus?.()
         }
-      } catch {}
+      } catch { }
     }
 
     const handleTabClick = (
@@ -255,6 +255,7 @@ const Tabs = defineComponent({
             {
               [ns.m('card')]: props.type === 'card',
               [ns.m('border-card')]: props.type === 'border-card',
+              [ns.m('fill-card')]: props.type === 'fill-card',
             },
           ]}
         >

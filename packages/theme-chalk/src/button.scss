@@ -16,6 +16,18 @@ $button-icon-span-gap: map.merge(
   $button-icon-span-gap
 );
 
+// @mixin set-component-css-var($name, $variables) {
+//   @each $attribute, $value in $variables {
+//     @debug "$button-----: #{getCssVarName($name, $attribute)} ----- #{$value}";
+//     @if $attribute == 'default' {
+//       #{getCssVarName($name)}: #{$value};
+//     } @else {
+//       //getCssVarName(('button', 'text-color')) => '--el-button-text-color': getCssVar('text-color', 'regular')=>
+//       #{getCssVarName($name, $attribute)}: #{$value};
+//     }
+//   }
+// }
+
 @include b(button) {
   @include set-component-css-var('button', $button);
 }

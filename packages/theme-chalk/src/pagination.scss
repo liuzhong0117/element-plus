@@ -114,7 +114,7 @@
     color: getCssVar('text-color', 'regular');
 
     &[disabled='true'] {
-      color: getCssVar('text-color', 'placeholder');
+      color: getCssVar('text-color', 'disabled');
     }
   }
 
@@ -174,11 +174,11 @@
 
       &:disabled,
       &.is-disabled {
-        color: getCssVar('text-color', 'placeholder');
+        color: getCssVar('text-color', 'disabled');
         background-color: getCssVar('disabled-bg-color');
 
         &.is-active {
-          color: getCssVar('text-color', 'secondary');
+          color: getCssVar('text-color', 'placeholder');
           background-color: getCssVar('fill-color', 'dark');
         }
       }

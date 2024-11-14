@@ -1,11 +1,11 @@
 <template>
   <div>
-    <el-button type="primary" :icon="Edit" />
+    <el-button type="primary" icon="icon-duration">duration</el-button>
     <el-button type="primary" :icon="Share" />
     <el-button type="primary" :icon="Delete" />
     <el-button type="primary" :icon="Search">Search</el-button>
     <el-button type="primary">
-      Upload<el-icon class="el-icon--right"><Upload /></el-icon>
+      Upload<el-icon icon="icon-duration"></el-icon>
     </el-button>
   </div>
 </template>

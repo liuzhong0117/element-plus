@@ -38,7 +38,7 @@
     width: 20px;
     line-height: 20px;
     margin: 10px 0 10px 10px;
-    border-radius: 3px;
+    border-radius: getCssVar('border-radius', 'base');
     text-align: center;
     font-size: 12px;
     color: getCssVar('text-color', 'primary');
@@ -120,7 +120,7 @@
     }
   }
   @include e(item) {
-    padding: 0 20px;
+    padding: 0 12px;
     height: getCssVar('tabs', 'header-height');
     box-sizing: border-box;
     display: flex;
@@ -188,15 +188,15 @@
         padding-right: 0;
       }
     }
-
+    &.#{$namespace}-tabs--fill-card,
     &.#{$namespace}-tabs--border-card,
     &.#{$namespace}-tabs--card {
       > .#{$namespace}-tabs__header {
         .#{$namespace}-tabs__item:nth-child(2) {
-          padding-left: 20px;
+          padding-left: 12px;
         }
         .#{$namespace}-tabs__item:last-child {
-          padding-right: 20px;
+          padding-right: 12px;
         }
       }
     }
@@ -212,7 +212,7 @@
     > .#{$namespace}-tabs__header .#{$namespace}-tabs__nav {
       border: 1px solid getCssVar('border-color-light');
       border-bottom: none;
-      border-radius: 4px 4px 0 0;
+      border-radius: getCssVar('border-radius', 'base') getCssVar('border-radius', 'base') 0 0;
       box-sizing: border-box;
     }
     > .#{$namespace}-tabs__header .#{$namespace}-tabs__active-bar {
@@ -261,6 +261,40 @@
             width: 14px;
           }
         }
+      }
+    }
+  }
+  @include m(fill-card) {
+    > .#{$namespace}-tabs__header .#{$namespace}-tabs__nav-wrap::after {
+      content: none;
+    }
+    > .#{$namespace}-tabs__header .#{$namespace}-tabs__item {
+      transition: all getCssVar('transition-duration')
+        getCssVar('transition-function-ease-in-out-bezier');
+      border: none;
+      margin-top: -1px;
+      color: getCssVar('text-color', 'secondary');
+      border-radius: getCssVar('border-radius', 'base');
+
+      &:first-child {
+        margin-left: -1px;
+      }
+
+      & + .#{$namespace}-tabs__item {
+        margin-left: -1px;
+      }
+
+      &.is-active {
+        color: getCssVar('color-primary');
+        background-color: getCssVar('fill-color', 'light');
+      }
+
+      &:not(.is-disabled):hover {
+        color: getCssVar('color-primary');
+      }
+
+      &.is-disabled {
+        color: getCssVar('disabled-text-color');
       }
     }
   }

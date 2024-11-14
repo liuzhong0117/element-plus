@@ -45,15 +45,15 @@ const value = ref('')
 const options = [
   {
     value: 'Option1',
-    label: 'Option1',
+    label: '阿里卡萨丁拉屎代理费啊阿斯卡到付件阿斯兰戴假发阿斯卡多路阀上岛咖啡垃圾啊手打发上岛咖啡 阿斯利康地方阿萨德发了就阿斯顿福建啊塞德里克发斯蒂芬',
   },
   {
     value: 'Option2',
-    label: 'Option2',
+    label: '阿斯利康地方阿萨德发了就阿斯顿福建啊塞德里克发斯蒂芬',
   },
   {
     value: 'Option3',
-    label: 'Option3',
+    label: '牛肉煎饼',
   },
   {
     value: 'Option4',

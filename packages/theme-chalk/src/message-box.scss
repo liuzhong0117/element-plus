@@ -83,9 +83,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0;
-    width: 40px;
-    height: 40px;
+    padding: 16px;
+    display: flex;
     border: none;
     outline: none;
     background: transparent;
@@ -109,14 +108,17 @@
   }
 
   @include e(content) {
+    min-height: 64px;
     color: getCssVar('messagebox-content-color');
     font-size: getCssVar('messagebox-content-font-size');
+    line-height: getCssVar('messagebox-content-line-height');
+    padding-bottom: getCssVar('messagebox-padding-primary');
   }
 
   @include e(container) {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
   }
 
   @include e(input) {
@@ -132,7 +134,7 @@
   }
 
   @include e(status) {
-    font-size: 24px;
+    font-size: 20px;
 
     @each $type in (success, info, warning, error) {
       &.#{$namespace}-message-box-icon--#{$type} {
@@ -162,7 +164,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    padding-top: getCssVar('messagebox-padding-primary');
+    padding-top: 8px;
   }
 
   // centerAlign 布局

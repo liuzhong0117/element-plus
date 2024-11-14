@@ -8,6 +8,7 @@
         [ns.m('border')]: border || isGroup,
         [ns.m('hidden')]: isHidden,
         [ns.m('group')]: isGroup,
+        [ns.m('header-bg')]: showHeaderBg,
         [ns.m('fluid-height')]: maxHeight,
         [ns.m('scrollable-x')]: layout.scrollX.value,
         [ns.m('scrollable-y')]: layout.scrollY.value,

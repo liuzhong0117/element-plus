@@ -85,7 +85,7 @@
 
     &:focus {
       outline: none;
-      @include inset-input-border(#{getCssVar('input', 'focus-border-color')});
+      @include inset-input-border(#{getCssVar('input', 'focus-border-color')}, false, 2px);
     }
   }
 
@@ -195,7 +195,7 @@
     }
 
     @include when(focus) {
-      @include inset-input-border(#{getCssVar('input', 'focus-border-color')});
+      @include inset-input-border(#{getCssVar('input', 'focus-border-color')}, false, 2px);
     }
   }
 
@@ -388,7 +388,7 @@
     justify-content: center;
     min-height: 100%;
     border-radius: getCssVar('input-border-radius');
-    padding: 0 20px;
+    padding: 0 16px;
     white-space: nowrap;
 
     &:focus {
@@ -398,7 +398,7 @@
     .#{$namespace}-select,
     .#{$namespace}-button {
       display: inline-block;
-      margin: 0 -20px;
+      margin: 0 -16px;
     }
 
     button.#{$namespace}-button,

@@ -8,9 +8,9 @@
 $switch-height: () !default;
 $switch-height: map.merge(
   (
-    'large': 40px,
+    'large': 36px,
     'default': 32px,
-    'small': 24px,
+    'small': 28px,
   ),
   $switch-height
 );
@@ -73,6 +73,16 @@ $switch-content-padding: map.merge(
     'small': 2px,
   ),
   $switch-content-padding
+);
+
+$switch-icon-size: () !default;
+$switch-icon-size: map.merge(
+  (
+    'large': 14px,
+    'default': 12px,
+    'small': 10px,
+  ),
+  $switch-icon-size
 );
 
 @include b(switch) {
@@ -197,6 +207,9 @@ $switch-content-padding: map.merge(
       justify-content: center;
       align-items: center;
       color: getCssVar('switch-off-color');
+      .#{$namespace}-icon{
+        font-size: 12px;
+      }
     }
   }
 
@@ -273,11 +286,17 @@ $switch-content-padding: map.merge(
                   $switch-button-size,
                   $size
                 )} + 2px);
+          .is-icon{
+            font-size: map.get($switch-icon-size, $size);
+          }
         }
 
         .#{$namespace}-switch__action {
           width: map.get($switch-button-size, $size);
           height: map.get($switch-button-size, $size);
+          .#{$namespace}-icon{
+            font-size: map.get($switch-icon-size, $size);
+          }
         }
       }
 

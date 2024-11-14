@@ -48,7 +48,7 @@ export const tabNavProps = buildProps({
   editable: Boolean,
   type: {
     type: String,
-    values: ['card', 'border-card', ''],
+    values: ['card', 'border-card', 'fill-card', ''],
     default: '',
   },
   stretch: Boolean,
@@ -272,29 +272,29 @@ const TabNav = defineComponent({
     return () => {
       const scrollBtn = scrollable.value
         ? [
-            <span
-              class={[
-                ns.e('nav-prev'),
-                ns.is('disabled', !scrollable.value.prev),
-              ]}
-              onClick={scrollPrev}
-            >
-              <ElIcon>
-                <ArrowLeft />
-              </ElIcon>
-            </span>,
-            <span
-              class={[
-                ns.e('nav-next'),
-                ns.is('disabled', !scrollable.value.next),
-              ]}
-              onClick={scrollNext}
-            >
-              <ElIcon>
-                <ArrowRight />
-              </ElIcon>
-            </span>,
-          ]
+          <span
+            class={[
+              ns.e('nav-prev'),
+              ns.is('disabled', !scrollable.value.prev),
+            ]}
+            onClick={scrollPrev}
+          >
+            <ElIcon>
+              <ArrowLeft />
+            </ElIcon>
+          </span>,
+          <span
+            class={[
+              ns.e('nav-next'),
+              ns.is('disabled', !scrollable.value.next),
+            ]}
+            onClick={scrollNext}
+          >
+            <ElIcon>
+              <ArrowRight />
+            </ElIcon>
+          </span>,
+        ]
         : null
 
       const tabs = props.panes.map((pane, index) => {
@@ -375,7 +375,7 @@ const TabNav = defineComponent({
                 ns.is(
                   'stretch',
                   props.stretch &&
-                    ['top', 'bottom'].includes(rootTabs.props.tabPosition)
+                  ['top', 'bottom'].includes(rootTabs.props.tabPosition)
                 ),
               ]}
               ref={nav$}

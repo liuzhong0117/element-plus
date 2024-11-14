@@ -181,7 +181,10 @@ export const SelectProps = buildProps({
   /**
    * @description whether the width of the dropdown is the same as the input
    */
-  fitInputWidth: Boolean,
+  fitInputWidth: {
+    type: Boolean,
+    default: true
+  },
   /**
    * @description custom suffix icon component
    */

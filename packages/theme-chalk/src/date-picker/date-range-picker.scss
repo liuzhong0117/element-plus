@@ -7,10 +7,10 @@
 }
 
 @include b(date-range-picker) {
-  width: 646px;
+  width: 624px;
 
   &.has-sidebar {
-    width: 756px;
+    width: 744px;
   }
 
   &.has-time .#{$namespace}-picker-panel__body-wrapper {
@@ -33,7 +33,7 @@
   @include e(header) {
     position: relative;
     text-align: center;
-    height: 28px;
+    line-height: 1;
 
     [class*='arrow-left'] {
       float: left;
@@ -47,6 +47,7 @@
       font-size: 16px;
       font-weight: 500;
       margin-right: 50px;
+      line-height: 24px;
     }
   }
 

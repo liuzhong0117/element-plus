@@ -82,16 +82,16 @@
     position: relative;
     cursor: pointer;
     color: getCssVar('text-color', 'regular');
-    font-size: 12px;
+    font-size: 0;
     transition: transform getCssVar('transition-duration-fast') ease-in-out;
-    height: 20px;
+    line-height: 1;
 
     @include m(expanded) {
       transform: rotate(90deg);
     }
 
     > .#{$namespace}-icon {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
@@ -150,6 +150,7 @@
   .#{$namespace}-table__cell {
     padding: map.get($table-padding, 'default');
     min-width: 0;
+    height: 48px;
     box-sizing: border-box;
     text-overflow: ellipsis;
     vertical-align: middle;
@@ -185,7 +186,7 @@
     text-overflow: ellipsis;
     white-space: normal;
     overflow-wrap: break-word;
-    line-height: 23px;
+    line-height: 20px;
     padding: 0 12px;
 
     &.#{$namespace}-tooltip {
@@ -314,6 +315,13 @@
 
     & th.#{$namespace}-table__cell {
       border-bottom: getCssVar('table-border');
+    }
+  }
+
+
+  @include m(header-bg){
+    th.#{$namespace}-table__cell {
+      background: getCssVar('fill-color', 'light');
     }
   }
 
@@ -512,7 +520,8 @@
     flex-direction: column;
     align-items: center;
     height: 14px;
-    width: 24px;
+    width: 14px;
+    margin-left: 8px;
     vertical-align: middle;
     cursor: pointer;
     overflow: initial;
@@ -524,15 +533,15 @@
     height: 0;
     border: solid 5px transparent;
     position: absolute;
-    left: 7px;
+    left: 2px;
 
     &.ascending {
-      border-bottom-color: getCssVar('text-color', 'placeholder');
+      border-bottom-color: getCssVar('text-color', 'secondary');
       top: -5px;
     }
 
     &.descending {
-      border-top-color: getCssVar('text-color', 'placeholder');
+      border-top-color: getCssVar('text-color', 'secondary');
       bottom: -3px;
     }
   }
@@ -616,7 +625,8 @@
     cursor: pointer;
 
     & i {
-      color: getCssVar('color-info');
+      margin-left: 8px;
+      color: getCssVar('text-color', 'secondary');
       font-size: 14px;
       vertical-align: middle;
     }

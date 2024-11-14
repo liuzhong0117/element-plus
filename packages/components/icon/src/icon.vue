@@ -1,7 +1,11 @@
 <template>
   <i :class="ns.b()" :style="style" v-bind="$attrs">
-    <slot />
+    <svg class="icon svg-icon" aria-hidden="true" v-if="icon && typeof icon == 'string'">
+      <use :xlink:href="'#' + icon"></use>
+    </svg>
+    <slot v-else />
   </i>
+  
 </template>
 
 <script lang="ts" setup>
@@ -10,6 +14,7 @@ import { addUnit, isUndefined } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { iconProps } from './icon'
 import type { CSSProperties } from 'vue'
+import '../../../assets/fonts/iconfont.js'
 
 defineOptions({
   name: 'ElIcon',

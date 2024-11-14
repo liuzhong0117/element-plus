@@ -77,7 +77,6 @@ const {
 } = useCheckbox(props, slots)
 
 const ns = useNamespace('checkbox')
-
 const compKls = computed(() => {
   return [
     ns.b(),

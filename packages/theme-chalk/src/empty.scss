@@ -39,7 +39,8 @@
     p {
       margin: 0;
       font-size: getCssVar('font-size', 'base');
-      color: getCssVar('text-color', 'secondary');
+      color: getCssVar('text-color', 'regular');
+      line-height: 20px;
     }
   }
 

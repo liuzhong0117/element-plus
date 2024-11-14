@@ -58,6 +58,7 @@ export default defineConfig(async ({ mode }) => {
   )
 
   return {
+    base: '/aaa/', // 设置基础路径
     server: {
       host: true,
       https: !!env.HTTPS,

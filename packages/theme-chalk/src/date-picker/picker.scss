@@ -11,7 +11,7 @@
     @include picker-popper(
       getCssVar('bg-color', 'overlay'),
       1px solid getCssVar('datepicker', 'border-color'),
-      getCssVar('box-shadow', 'light')
+      getCssVar('box-shadow')
     );
   }
 }
@@ -156,9 +156,9 @@
   }
 
   @include when(active) {
-    @include inset-input-border(#{getCssVar('input', 'focus-border-color')});
+    @include inset-input-border(#{getCssVar('input', 'focus-border-color')}, false, 2px);
     &:hover {
-      @include inset-input-border(#{getCssVar('input', 'focus-border-color')});
+      @include inset-input-border(#{getCssVar('input', 'focus-border-color')}, false, 2px);
     }
   }
 

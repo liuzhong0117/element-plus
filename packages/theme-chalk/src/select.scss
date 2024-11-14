@@ -8,8 +8,8 @@
 @use './option.scss';
 @use './option-group.scss';
 
-@mixin mixed-input-border($color) {
-  box-shadow: 0 0 0 1px $color inset;
+@mixin mixed-input-border($color, $border-width: 1px) {
+  box-shadow: 0 0 0 $border-width $color inset;
 }
 
 @include b(select) {
@@ -48,7 +48,7 @@
     }
 
     @include when(focused) {
-      @include mixed-input-border(#{getCssVar('color-primary')});
+      @include mixed-input-border(#{getCssVar('color-primary')}, 2px);
     }
 
     @include when(hovering) {
@@ -61,7 +61,7 @@
       cursor: not-allowed;
 
       background-color: getCssVar('fill-color', 'light');
-      color: getCssVar('text-color', 'placeholder');
+      color: getCssVar('text-color', 'disabled');
       @include mixed-input-border(#{getCssVar('select-disabled-border')});
 
       &:hover {

@@ -1,7 +1,7 @@
 <template>
   <div class="example-pagination-block">
     <div class="example-demonstration">When you have few pages</div>
-    <el-pagination layout="prev, pager, next" :total="50" />
+    <el-pagination layout="prev, pager, next" disabled :total="50" />
   </div>
   <div class="example-pagination-block">
     <div class="example-demonstration">When you have more than 7 pages</div>

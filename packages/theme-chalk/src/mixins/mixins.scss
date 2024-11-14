@@ -226,10 +226,10 @@
   }
 }
 
-@mixin inset-input-border($color, $important: false) {
+@mixin inset-input-border($color, $important: false, $border-width: 1px) {
   @if $important == true {
-    box-shadow: 0 0 0 1px $color inset !important;
+    box-shadow: 0 0 0 $border-width $color inset !important;
   } @else {
-    box-shadow: 0 0 0 1px $color inset;
+    box-shadow: 0 0 0 $border-width $color inset;
   }
 }

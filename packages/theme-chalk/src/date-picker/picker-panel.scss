@@ -6,7 +6,6 @@
   background: getCssVar('bg-color', 'overlay');
   border-radius: getCssVar('border-radius-base');
   line-height: 30px;
-
   .#{$namespace}-time-panel {
     margin: 5px 0;
     border: solid 1px getCssVar('datepicker-border-color');
@@ -24,16 +23,18 @@
 
   @include e(content) {
     position: relative;
-    margin: 15px;
+    margin: 16px;
   }
 
   @include e(footer) {
     border-top: 1px solid getCssVar('datepicker-inner-border-color');
-    padding: 4px 12px;
+    padding: 8px 12px;
     text-align: right;
     background-color: getCssVar('bg-color', 'overlay');
     position: relative;
     font-size: 0;
+    border-bottom-left-radius: getCssVar('border-radius-base');
+    border-bottom-right-radius: getCssVar('border-radius-base');
   }
 
   @include e(shortcut) {
@@ -77,13 +78,13 @@
   }
 
   @include e(icon-btn) {
-    font-size: 12px;
+    font-size: 0;
     color: getCssVar('datepicker-icon-color');
     border: 0;
     background: transparent;
     cursor: pointer;
     outline: none;
-    margin-top: 8px;
+    padding: 5px;
 
     &:hover {
       color: getCssVar('datepicker-hover-text-color');
@@ -101,7 +102,7 @@
     }
     & .#{$namespace}-icon {
       cursor: pointer;
-      font-size: inherit;
+      font-size: 14px;
     }
   }
 
@@ -115,17 +116,18 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 110px;
+  width: 120px;
   border-right: 1px solid getCssVar('datepicker-inner-border-color');
   box-sizing: border-box;
-  padding-top: 6px;
+  padding-top: 4px;
   background-color: getCssVar('bg-color', 'overlay');
   overflow: auto;
+  border-top-left-radius: getCssVar('border-radius-base');
 }
 
 .#{$namespace}-picker-panel
   *[slot='sidebar']
   + .#{$namespace}-picker-panel__body,
 .#{$namespace}-picker-panel__sidebar + .#{$namespace}-picker-panel__body {
-  margin-left: 110px;
+  margin-left: 120px;
 }

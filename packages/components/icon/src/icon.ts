@@ -9,6 +9,9 @@ export const iconProps = buildProps({
   size: {
     type: definePropType<number | string>([Number, String]),
   },
+  icon: {
+    type: [String, Object],
+  },
   /**
    * @description SVG tag's fill attribute
    */

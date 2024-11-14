@@ -43,7 +43,7 @@ export default defineConfig(async ({ mode }) => {
     // css: {
     //   preprocessorOptions: {
     //     scss: {
-    //       additionalData: `@use "/styles/custom.scss" as *;`,
+    //       additionalData: `@use "./src/style/index.scss" as *;`,
     //     },
     //   },
     // },

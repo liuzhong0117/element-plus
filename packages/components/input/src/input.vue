@@ -25,8 +25,8 @@
         <span v-if="$slots.prefix || prefixIcon" :class="nsInput.e('prefix')">
           <span :class="nsInput.e('prefix-inner')">
             <slot name="prefix" />
-            <el-icon v-if="prefixIcon" :class="nsInput.e('icon')">
-              <component :is="prefixIcon" />
+            <el-icon v-if="prefixIcon" :class="nsInput.e('icon')" icon="icon-duration">
+              <!-- <component :is="prefixIcon" /> -->
             </el-icon>
           </span>
         </span>

@@ -24,19 +24,19 @@
     background: getCssVar('text-color', 'primary');
     border: 1px solid getCssVar('text-color', 'primary');
 
-    #{$arrow-selector}::before {
-      border: 1px solid getCssVar('text-color', 'primary');
-      background: getCssVar('text-color', 'primary');
-      right: 0;
-    }
+    // #{$arrow-selector}::before {
+    //   border: 1px solid getCssVar('text-color', 'primary');
+    //   background: getCssVar('text-color', 'primary');
+    //   right: 0;
+    // }
   }
 
   @include when(light) {
     background: getCssVar('bg-color', 'overlay');
-    border: 1px solid getCssVar('border-color', 'light');
+    border: 1px solid getCssVar('border-color');
 
     #{$arrow-selector}::before {
-      border: 1px solid getCssVar('border-color', 'light');
+      border: 1px solid getCssVar('border-color');
       background: getCssVar('bg-color', 'overlay');
       right: 0;
     }

@@ -75,19 +75,19 @@ type ColumnStyle<T> =
 type CellCls<T> =
   | string
   | ((data: {
-      row: T
-      rowIndex: number
-      column: TableColumnCtx<T>
-      columnIndex: number
-    }) => string)
+    row: T
+    rowIndex: number
+    column: TableColumnCtx<T>
+    columnIndex: number
+  }) => string)
 type CellStyle<T> =
   | CSSProperties
   | ((data: {
-      row: T
-      rowIndex: number
-      column: TableColumnCtx<T>
-      columnIndex: number
-    }) => CSSProperties)
+    row: T
+    rowIndex: number
+    column: TableColumnCtx<T>
+    columnIndex: number
+  }) => CSSProperties)
 type Layout = 'fixed' | 'auto'
 interface TableProps<T> {
   data: T[]
@@ -98,6 +98,7 @@ interface TableProps<T> {
   fit?: boolean
   stripe?: boolean
   border?: boolean
+  showHeaderBg?: boolean
   rowKey?: string | ((row: T) => string)
   context?: Table<T>
   showHeader?: boolean
@@ -128,9 +129,9 @@ interface TableProps<T> {
   }) =>
     | number[]
     | {
-        rowspan: number
-        colspan: number
-      }
+      rowspan: number
+      colspan: number
+    }
     | undefined
   selectOnIndeterminate?: boolean
   indent?: number
@@ -216,6 +217,10 @@ export default {
    * @description whether Table has vertical border
    */
   border: Boolean,
+  /**
+ * @description whether Table header has backgroundcolor
+ */
+  showHeaderBg: Boolean,
   /**
    * @description key of row data, used for optimizing rendering. Required if `reserve-selection` is on or display tree data. When its type is String, multi-level access is supported, e.g. `user.info.id`, but `user.info[0].id` is not supported, in which case `Function` should be used
    */

@@ -57,7 +57,7 @@
     <el-form-item label="Activity form">
       <el-input v-model="form.desc" type="textarea" />
     </el-form-item>
-    <el-form-item>
+    <el-form-item label=" ">
       <el-button type="primary" @click="onSubmit">Create</el-button>
       <el-button>Cancel</el-button>
     </el-form-item>

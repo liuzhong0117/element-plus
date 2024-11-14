@@ -79,7 +79,7 @@ $tag-icon-span-gap: map.merge(
   line-height: 1;
   border-width: $tag-border-width;
   border-style: solid;
-  border-radius: getCssVar('tag-border-radius');
+  border-radius: map.get($tag-border-raidus, 'default');
   box-sizing: border-box;
   white-space: nowrap;
 
@@ -149,6 +149,7 @@ $tag-icon-span-gap: map.merge(
     @include m($size) {
       padding: 0 map.get($tag-padding, $size) - $tag-border-width;
       height: map.get($tag-height, $size);
+      border-radius: map.get($tag-border-raidus, $size);
 
       @include set-css-var-value(
         'icon-size',

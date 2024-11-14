@@ -2,6 +2,7 @@
   <el-input
     v-model="input"
     style="width: 240px"
+    clearable
     type="password"
     placeholder="Please input password"
     show-password
