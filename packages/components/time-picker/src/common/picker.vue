@@ -64,8 +64,9 @@
             :class="nsInput.e('icon')"
             @mousedown.prevent="onMouseDownInput"
             @touchstart.passive="onTouchStartInput"
+            :icon="triggerIcon"
           >
-            <component :is="triggerIcon" />
+            <!-- <component :is="triggerIcon" /> -->
           </el-icon>
         </template>
         <template #suffix>
@@ -73,8 +74,9 @@
             v-if="showClose && clearIcon"
             :class="`${nsInput.e('icon')} clear-icon`"
             @click.stop="onClearIconClick"
+            :icon="clearIcon"
           >
-            <component :is="clearIcon" />
+            <!-- <component :is="clearIcon" /> -->
           </el-icon>
         </template>
       </el-input>
@@ -94,8 +96,9 @@
           :class="[nsInput.e('icon'), nsRange.e('icon')]"
           @mousedown.prevent="onMouseDownInput"
           @touchstart.passive="onTouchStartInput"
+          :icon="triggerIcon"
         >
-          <component :is="triggerIcon" />
+          <!-- <component :is="triggerIcon" /> -->
         </el-icon>
         <input
           :id="id && id[0]"
@@ -134,8 +137,9 @@
           v-if="clearIcon"
           :class="clearIconKls"
           @click="onClearIconClick"
+          :icon="clearIcon"
         >
-          <component :is="clearIcon" />
+          <!-- <component :is="clearIcon" /> -->
         </el-icon>
       </div>
     </template>
@@ -491,7 +495,7 @@ const displayValue = computed<UserInput>(() => {
   return ''
 })
 
-const isTimeLikePicker = computed(() => props.type.includes('time'))
+const isDateLikePicker = computed(() => props.type.includes('date'))
 
 const isTimePicker = computed(() => props.type.startsWith('time'))
 
@@ -502,7 +506,7 @@ const isMonthsPicker = computed(() => props.type === 'months')
 const isYearsPicker = computed(() => props.type === 'years')
 
 const triggerIcon = computed(
-  () => props.prefixIcon || (isTimeLikePicker.value ? Clock : Calendar)
+  () => props.prefixIcon || (isDateLikePicker.value ? 'icon-Calendar-new' : 'icon-clock-new')
 )
 
 const showClose = ref(false)

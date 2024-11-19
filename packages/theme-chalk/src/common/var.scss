@@ -169,16 +169,16 @@ $box-shadow: map.merge(
       0px 2px 4px -2px rgba(16, 24, 40, 0.03),
     ),
     'light': (
-      0px 0px 12px 0px rgba(16, 24, 40, 0.12),
+      0px 0px 6px 0px rgba(16, 24, 40, 0.12),
     ),
     'lighter': (
-      0px 0px 6px 0px rgba(16, 24, 40, 0.12),
+      0px 1px 2px 0px rgba(16, 24, 40, 0.05),
     ),
     'dark': (
       0px 16px 48px 16px rgba(16, 24, 40, 0.08), 
       0px 12px 32px 0px rgba(16, 24, 40, 0.12), 
       0px 8px 16px -8px rgba(16, 24, 40, 0.16),
-    ),
+    )
   ),
   $box-shadow
 );
@@ -270,8 +270,8 @@ $checkbox: map.merge(
     'font-size': 14px,
     'font-weight': getCssVar('font-weight-primary'),
     'text-color': getCssVar('text-color-regular'),
-    'input-height': 14px,
-    'input-width': 14px,
+    // 'input-height': 14px,
+    // 'input-width': 14px,
     'border-radius': getCssVar('border-radius-small'),
     'bg-color': getCssVar('fill-color', 'blank'),
     'input-border': getCssVar('border'),
@@ -328,8 +328,6 @@ $radio: map.merge(
     'font-size': getCssVar('font-size-base'),
     'text-color': getCssVar('text-color-regular'),
     'font-weight': getCssVar('font-weight-primary'),
-    'input-height': 14px,
-    'input-width': 14px,
     'input-border-radius': getCssVar('border-radius-circle'),
     'input-bg-color': getCssVar('fill-color', 'blank'),
     'input-border': getCssVar('border'),
@@ -440,14 +438,14 @@ $select-dropdown: () !default;
 $select-dropdown: map.merge(
   (
     'bg-color': getCssVar('bg-color', 'overlay'),
-    'shadow': getCssVar('box-shadow'),
+    'shadow': (0px 8px 16px -4px rgba(16, 24, 40, 0.06),  0px 2px 4px -2px rgba(16, 24, 40, 0.03), 0 0 0 1px getCssVar('border-color', 'lighter') inset),
     'empty-color': getCssVar('text-color-secondary'),
     'max-height': 274px,
     'padding': 6px 0,
     'empty-padding': 10px 0,
     'header-padding': 10px,
     'footer-padding': 10px,
-    'border': 1px solid getCssVar('border-color'),
+    'border': 1px solid getCssVar('border-color', 'lighter'),
   ),
   $select-dropdown
 );
@@ -538,8 +536,8 @@ $message: map.merge(
   (
     'bg-color': getCssVar('color', 'info', 'light-9'),
     'border-color': getCssVar('border-color-lighter'),
-    'padding': 11px 15px,
-    'close-size': 20px,
+    'padding': 14px 16px,
+    'close-size': 16px,
     'close-icon-color': getCssVar('text-color-placeholder'),
     'close-hover-color': getCssVar('text-color-secondary'),
   ),

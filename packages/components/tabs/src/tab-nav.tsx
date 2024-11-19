@@ -311,8 +311,8 @@ const TabNav = defineComponent({
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             onClick={(ev: MouseEvent) => emit('tabRemove', pane, ev)}
+            icon="icon-x-close"
           >
-            <Close />
           </ElIcon>
         ) : null
 

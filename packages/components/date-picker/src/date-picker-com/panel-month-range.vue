@@ -30,7 +30,7 @@
               class="d-arrow-left"
               @click="leftPrevYear"
             >
-              <el-icon><d-arrow-left /></el-icon>
+            <el-icon icon="icon-chevron-left-double"></el-icon>
             </button>
             <button
               v-if="unlinkPanels"
@@ -43,7 +43,7 @@
               class="d-arrow-right"
               @click="leftNextYear"
             >
-              <el-icon><d-arrow-right /></el-icon>
+              <el-icon icon="icon-chevron-right-double"></el-icon>
             </button>
             <div>{{ leftLabel }}</div>
           </div>
@@ -69,7 +69,7 @@
               class="d-arrow-left"
               @click="rightPrevYear"
             >
-              <el-icon><d-arrow-left /></el-icon>
+            <el-icon icon="icon-chevron-left-double"></el-icon>
             </button>
             <button
               type="button"
@@ -77,7 +77,7 @@
               class="d-arrow-right"
               @click="rightNextYear"
             >
-              <el-icon><d-arrow-right /></el-icon>
+              <el-icon icon="icon-chevron-right-double"></el-icon>
             </button>
             <div>{{ rightLabel }}</div>
           </div>

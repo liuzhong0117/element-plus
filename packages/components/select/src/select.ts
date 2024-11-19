@@ -176,7 +176,7 @@ export const SelectProps = buildProps({
    */
   clearIcon: {
     type: iconPropType,
-    default: CircleClose,
+    default: 'icon-x-circle',
   },
   /**
    * @description whether the width of the dropdown is the same as the input
@@ -190,7 +190,7 @@ export const SelectProps = buildProps({
    */
   suffixIcon: {
     type: iconPropType,
-    default: ArrowDown,
+    default: 'icon-chevron-down',
   },
   /**
    * @description tag type

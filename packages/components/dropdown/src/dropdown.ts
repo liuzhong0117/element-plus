@@ -45,7 +45,7 @@ export const dropdownProps = buildProps({
    */
   placement: {
     type: definePropType<Placement>(String),
-    default: 'bottom',
+    default: 'bottom-start',
   },
   /**
    * @description [popper.js](https://popper.js.org/docs/v2/) parameters

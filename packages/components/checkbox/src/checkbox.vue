@@ -39,7 +39,9 @@
         @blur="isFocused = false"
         @click.stop
       />
-      <span :class="ns.e('inner')" />
+      <span :class="ns.e('inner')">
+        <el-icon icon="icon-check"></el-icon>
+      </span>
     </span>
     <span v-if="hasOwnLabel" :class="ns.e('label')">
       <slot />

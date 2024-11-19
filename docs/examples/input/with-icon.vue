@@ -5,20 +5,20 @@
       v-model="input1"
       style="width: 240px"
       placeholder="Pick a date"
-      :suffix-icon="Calendar"
+      suffix-icon="icon-Calendar-new"
     />
     <el-input
       v-model="input2"
       style="width: 240px"
       placeholder="Type something"
-      :prefix-icon="Search"
+      prefix-icon="icon-Calendar-new"
     />
   </div>
   <div class="flex gap-4">
     <span>Using slots</span>
     <el-input v-model="input3" style="width: 240px" placeholder="Pick a date">
       <template #suffix>
-        <el-icon class="el-input__icon"><calendar /></el-icon>
+        <el-icon class="el-input__icon" icon="icon-Calendar-new"><calendar /></el-icon>
       </template>
     </el-input>
     <el-input
@@ -27,7 +27,7 @@
       placeholder="Type something"
     >
       <template #prefix>
-        <el-icon class="el-input__icon"><search /></el-icon>
+        <el-icon class="el-input__icon" icon="icon-Calendar-new"><search /></el-icon>
       </template>
     </el-input>
   </div>

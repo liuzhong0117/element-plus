@@ -8,8 +8,7 @@
     <span :class="ns.e('content')">
       <slot />
     </span>
-    <el-icon v-if="closable" :class="ns.e('close')" @click.stop="handleClose">
-      <Close />
+    <el-icon icon="icon-x-close" v-if="closable" :class="ns.e('close')" @click.stop="handleClose">
     </el-icon>
   </span>
   <transition v-else :name="`${ns.namespace.value}-zoom-in-center`" appear>
@@ -21,8 +20,7 @@
       <span :class="ns.e('content')">
         <slot />
       </span>
-      <el-icon v-if="closable" :class="ns.e('close')" @click.stop="handleClose">
-        <Close />
+      <el-icon icon="icon-x-close" v-if="closable" :class="ns.e('close')" @click.stop="handleClose">
       </el-icon>
     </span>
   </transition>
@@ -31,7 +29,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import ElIcon from '@element-plus/components/icon'
-import { Close } from '@element-plus/icons-vue'
+// import { Close } from '@element-plus/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import { useFormSize } from '@element-plus/components/form'
 

@@ -2,7 +2,7 @@
 @use '../common/var' as *;
 
 @include b(time-panel) {
-  border-radius: 2px;
+  border-radius: getCssVar('border-radius-base');
   position: relative;
   width: 165px;
   left: 0;

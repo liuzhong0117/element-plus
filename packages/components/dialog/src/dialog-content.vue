@@ -16,8 +16,8 @@
         type="button"
         @click="$emit('close')"
       >
-        <el-icon :class="ns.e('close')">
-          <component :is="closeIcon || Close" />
+        <el-icon :class="ns.e('close')" :icon="closeIcon">
+          <!-- <component :is="closeIcon || Close" /> -->
         </el-icon>
       </button>
     </header>

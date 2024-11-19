@@ -205,8 +205,7 @@ const Tabs = defineComponent({
             {addSlot ? (
               renderSlot(slots, 'add-icon')
             ) : (
-              <ElIcon class={ns.is('icon-plus')}>
-                <Plus />
+              <ElIcon icon="icon-plus" class={ns.is('icon-plus')}>
               </ElIcon>
             )}
           </div>

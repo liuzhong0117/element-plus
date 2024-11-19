@@ -71,7 +71,7 @@
               :class="ppNs.e('icon-btn')"
               @click="moveByYear(false)"
             >
-              <el-icon><d-arrow-left /></el-icon>
+            <el-icon icon="icon-chevron-left-double"></el-icon>
             </button>
             <button
               v-show="currentView === 'date'"
@@ -81,7 +81,7 @@
               class="arrow-left"
               @click="moveByMonth(false)"
             >
-              <el-icon><arrow-left /></el-icon>
+            <el-icon icon="icon-chevron-left"></el-icon>
             </button>
           </span>
           <span
@@ -115,7 +115,7 @@
               class="arrow-right"
               @click="moveByMonth(true)"
             >
-              <el-icon><arrow-right /></el-icon>
+            <el-icon icon="icon-chevron-right"></el-icon>
             </button>
             <button
               type="button"
@@ -124,7 +124,7 @@
               class="d-arrow-right"
               @click="moveByYear(true)"
             >
-              <el-icon><d-arrow-right /></el-icon>
+            <el-icon icon="icon-chevron-right-double"></el-icon>
             </button>
           </span>
         </div>

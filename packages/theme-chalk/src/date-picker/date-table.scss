@@ -147,6 +147,18 @@
     &:focus {
       outline: none;
     }
+    &:nth-child(7n){
+      .#{$namespace}-date-table-cell {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+    }
+    &:nth-child(7n+1){
+      .#{$namespace}-date-table-cell {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+    }
   }
 
   th {

@@ -37,7 +37,7 @@ export const popperCoreConfigProps = buildProps({
    */
   offset: {
     type: Number,
-    default: 12,
+    default: 6,
   },
   /**
    * @description position of Tooltip

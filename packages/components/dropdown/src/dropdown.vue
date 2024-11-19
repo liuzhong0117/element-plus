@@ -85,7 +85,7 @@
           :tabindex="tabindex"
           :aria-label="t('el.dropdown.toggleDropdown')"
         >
-          <el-icon :class="ns.e('icon')"><arrow-down /></el-icon>
+          <el-icon :class="ns.e('icon')" icon="icon-chevron-down"></el-icon>
         </el-button>
       </el-button-group>
     </template>

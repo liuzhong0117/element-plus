@@ -142,9 +142,9 @@ export const cellForced = {
         {
           default: () => {
             return [
-              h(ElIcon, null, {
+              h(ElIcon, { icon: 'icon-chevron-right' }, {
                 default: () => {
-                  return [h(ArrowRight)]
+                  return [h()]
                 },
               }),
             ]
@@ -218,10 +218,10 @@ export function treeCellPrefix<T>(
       ns.e('expand-icon'),
       treeNode.expanded ? ns.em('expand-icon', 'expanded') : '',
     ]
-    let icon = ArrowRight
-    if (treeNode.loading) {
-      icon = Loading
-    }
+    let icon = Loading
+    // if (treeNode.loading) {
+    //   icon = Loading
+    // }
 
     ele.push(
       h(
@@ -232,6 +232,13 @@ export function treeCellPrefix<T>(
         },
         {
           default: () => {
+            if (!treeNode.loading) {
+              return [h(ElIcon, { icon: 'icon-chevron-right' }, {
+                default: () => {
+                  return [h()]
+                },
+              })]
+            }
             return [
               h(
                 ElIcon,

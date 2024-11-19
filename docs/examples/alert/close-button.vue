@@ -1,5 +1,6 @@
 <template>
   <div style="max-width: 600px">
+    <el-alert title="Primary alert" type="primary" :closable="false" />
     <el-alert title="Unclosable alert" type="success" :closable="false" />
     <el-alert title="Customized close text" type="info" close-text="Gotcha" />
     <el-alert title="Alert with callback" type="warning" @close="hello" />

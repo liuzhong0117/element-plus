@@ -15,6 +15,8 @@ const open2 = () => {
   ElMessage({
     message: 'Congrats, this is a success message.',
     type: 'success',
+    showClose: true,
+    duration: 300000
   })
 }
 const open3 = () => {

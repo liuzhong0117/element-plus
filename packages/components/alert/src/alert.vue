@@ -5,8 +5,8 @@
       :class="[ns.b(), ns.m(type), ns.is('center', center), ns.is(effect)]"
       role="alert"
     >
-      <el-icon v-if="showIcon && iconComponent" :class="iconClass">
-        <component :is="iconComponent" />
+      <el-icon v-if="showIcon && iconComponent" :icon="iconComponent" :class="iconClass">
+        <!-- <component :is="iconComponent" /> -->
       </el-icon>
 
       <div :class="ns.e('content')">
@@ -29,8 +29,7 @@
           >
             {{ closeText }}
           </div>
-          <el-icon v-else :class="ns.e('close-btn')" @click="close">
-            <Close />
+          <el-icon icon="icon-x-close" v-else :class="ns.e('close-btn')" @click="close">
           </el-icon>
         </template>
       </div>
@@ -44,7 +43,7 @@ import { TypeComponents, TypeComponentsMap } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { alertEmits, alertProps } from './alert'
 
-const { Close } = TypeComponents
+// const { Close } = TypeComponents
 
 defineOptions({
   name: 'ElAlert',

@@ -93,6 +93,7 @@
         #{getCssVarName('button-disabled-border-color')},
         map.get($button, 'disabled-border-color')
       );
+      border-left-color: transparent;
       box-shadow: none;
     }
     &:first-child .#{$namespace}-checkbox-button__inner {

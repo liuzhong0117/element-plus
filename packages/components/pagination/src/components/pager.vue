@@ -50,8 +50,9 @@
       @focus="onFocus()"
       @blur="quickNextFocus = false"
     >
-      <d-arrow-right v-if="(quickNextHover || quickNextFocus) && !disabled" />
-      <more-filled v-else />
+      <!-- <d-arrow-right v-if="(quickNextHover || quickNextFocus) && !disabled" /> -->
+      <el-icon v-if="(quickNextHover || quickNextFocus) && !disabled"  icon="icon-chevron-right-double"></el-icon>
+      <el-icon v-else icon="icon-dots-horizontal-new"></el-icon>
     </li>
     <li
       v-if="pageCount > 1"

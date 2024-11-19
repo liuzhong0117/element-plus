@@ -44,8 +44,9 @@
                 <el-icon
                   v-if="iconComponent && center"
                   :class="[ns.e('status'), typeClass]"
+                  :icon="iconComponent"
                 >
-                  <component :is="iconComponent" />
+                  <!-- <component :is="iconComponent" /> -->
                 </el-icon>
                 <span>{{ title }}</span>
               </div>
@@ -61,8 +62,8 @@
                   handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
                 "
               >
-                <el-icon :class="ns.e('close')">
-                  <close />
+                <el-icon icon="icon-x-close" :class="ns.e('close')">
+                  <!-- <close /> -->
                 </el-icon>
               </button>
             </div>
@@ -71,8 +72,9 @@
                 <el-icon
                   v-if="iconComponent && !center && hasMessage"
                   :class="[ns.e('status'), typeClass]"
+                  :icon="iconComponent"
                 >
-                  <component :is="iconComponent" />
+                  <!-- <component :is="iconComponent" /> -->
                 </el-icon>
                 <div v-if="hasMessage" :class="ns.e('message')">
                   <slot>

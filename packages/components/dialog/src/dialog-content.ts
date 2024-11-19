@@ -14,6 +14,7 @@ export const dialogContentProps = buildProps({
    */
   closeIcon: {
     type: iconPropType,
+    default: 'icon-x-close'
   },
   /**
    * @description enable dragging feature for Dialog

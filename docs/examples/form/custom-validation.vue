@@ -9,7 +9,7 @@
     class="demo-ruleForm"
   >
     <el-form-item label="Password" prop="pass">
-      <el-input v-model="ruleForm.pass" type="password" autocomplete="off" />
+      <el-input v-model="ruleForm.pass" type="text" autocomplete="off" />
     </el-form-item>
     <el-form-item label="Confirm" prop="checkPass">
       <el-input

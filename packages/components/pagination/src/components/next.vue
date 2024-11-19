@@ -8,8 +8,8 @@
     @click="$emit('click', $event)"
   >
     <span v-if="nextText">{{ nextText }}</span>
-    <el-icon v-else>
-      <component :is="nextIcon" />
+    <el-icon v-else :icon="nextIcon">
+      <!-- <component :is="nextIcon" /> -->
     </el-icon>
   </button>
 </template>

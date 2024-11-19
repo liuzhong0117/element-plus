@@ -3,7 +3,7 @@ import { useCssVar } from '@vueuse/core'
 import { useCopyColor } from '../../utils'
 
 const primary = useCssVar('--el-color-primary')
-const colorLevel = [3, 5, 7, 8, 9].map((i) => `light-${i}`)
+const colorLevel = [2, 4, 6, 8, 9].map((i) => `light-${i}`)
 colorLevel.unshift('dark-2')
 
 const { copyColor } = useCopyColor()

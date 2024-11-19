@@ -43,12 +43,14 @@
         <el-icon
           v-repeat-click="onDecrement"
           :class="['arrow-up', ns.be('spinner', 'arrow')]"
+          icon="icon-chevron-up"
         >
           <arrow-up />
         </el-icon>
         <el-icon
           v-repeat-click="onIncrement"
           :class="['arrow-down', ns.be('spinner', 'arrow')]"
+          icon="icon-chevron-down"
         >
           <arrow-down />
         </el-icon>

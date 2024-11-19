@@ -125,7 +125,7 @@ export const paginationProps = buildProps({
    */
   prevIcon: {
     type: iconPropType,
-    default: () => ArrowLeft,
+    default: () => 'icon-chevron-left',
   },
   /**
    * @description text for the next button
@@ -139,7 +139,7 @@ export const paginationProps = buildProps({
    */
   nextIcon: {
     type: iconPropType,
-    default: () => ArrowRight,
+    default: () => 'icon-chevron-right',
   },
   /**
    * @description whether Pagination size is teleported to body

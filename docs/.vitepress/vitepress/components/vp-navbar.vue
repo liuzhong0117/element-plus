@@ -33,13 +33,14 @@ const currentLink = computed(() => {
   <div class="navbar-wrapper">
     <div class="header-container">
       <div class="logo-container">
-        <a :href="currentLink">
+        <el-text class="mx-1" size="large" type="primary">优学院UI组件库</el-text>
+        <!-- <a :href="currentLink">
           <img
             class="logo"
             src="/images/element-plus-logo.svg"
             alt="Element Plus Logo"
           />
-        </a>
+        </a> -->
       </div>
       <!-- <div class="content">
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />
@@ -60,11 +61,13 @@ const currentLink = computed(() => {
 <style scoped lang="scss">
 .logo-container {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   height: var(--header-height);
-  > a {
-    height: 28px;
-    width: 128px;
+  .el-text{
+    font-size: 24px;
+  }
+  > .sub {
+    font-size: 12px;
   }
   .logo {
     position: relative;

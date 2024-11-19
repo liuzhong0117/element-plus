@@ -31,14 +31,15 @@ export const TypeComponents = {
 }
 
 export const TypeComponentsMap = {
-  success: SuccessFilled,
-  warning: WarningFilled,
-  error: CircleCloseFilled,
-  info: InfoFilled,
+  success: 'icon-check-circle-fill',
+  warning: 'icon-alert-triangle-fill',
+  error: 'icon-x-circle-fill',
+  info: 'icon-info-fill',
+  primary: 'icon-info-fill'
 }
 
 export const ValidateComponentsMap = {
   validating: Loading,
-  success: CircleCheck,
-  error: CircleClose,
+  success: 'icon-check-circle',
+  error: 'icon-x-circle',
 }

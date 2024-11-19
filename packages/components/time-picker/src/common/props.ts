@@ -86,7 +86,7 @@ export const timePickerDefaultProps = buildProps({
    */
   clearIcon: {
     type: definePropType<string | Component>([String, Object]),
-    default: CircleClose,
+    default: 'icon-x-circle',
   },
   /**
    * @description whether the input is editable

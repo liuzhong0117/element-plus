@@ -214,21 +214,24 @@
             <el-icon
               v-if="iconComponent && !showClose"
               :class="[nsSelect.e('caret'), nsSelect.e('icon'), iconReverse]"
+              :icon="iconComponent"
             >
-              <component :is="iconComponent" />
+              <!-- <component :is="iconComponent" /> -->
             </el-icon>
             <el-icon
               v-if="showClose && clearIcon"
               :class="[nsSelect.e('caret'), nsSelect.e('icon')]"
               @click="handleClearClick"
+              :icon="clearIcon"
             >
-              <component :is="clearIcon" />
+              <!-- <component :is="clearIcon" /> -->
             </el-icon>
             <el-icon
               v-if="validateState && validateIcon"
               :class="[nsInput.e('icon'), nsInput.e('validateIcon')]"
+              :icon="validateIcon"
             >
-              <component :is="validateIcon" />
+              <!-- <component :is="validateIcon" /> -->
             </el-icon>
           </div>
         </div>

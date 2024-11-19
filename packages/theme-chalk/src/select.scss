@@ -183,6 +183,11 @@
       map.get($select-dropdown, 'border'),
       map.get($select-dropdown, 'shadow')
     );
+    &.#{$namespace}-popper{
+      @include when(light) {
+        border: none;
+      }
+    }
   }
 
   @include e(input-wrapper) {

@@ -27,8 +27,8 @@
         :type="badgeType"
         :class="ns.e('badge')"
       />
-      <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
-        <component :is="iconComponent" />
+      <el-icon :icon="iconComponent" v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
+        <!-- <component :is="iconComponent" /> -->
       </el-icon>
       <slot>
         <p v-if="!dangerouslyUseHTMLString" :class="ns.e('content')">
@@ -37,8 +37,8 @@
         <!-- Caution here, message could've been compromised, never use user's input as message -->
         <p v-else :class="ns.e('content')" v-html="message" />
       </slot>
-      <el-icon v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close">
-        <Close />
+      <el-icon icon="icon-x-close" v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close">
+        <!-- <Close /> -->
       </el-icon>
     </div>
   </transition>
@@ -57,7 +57,7 @@ import { getLastOffset, getOffsetOrSpace } from './instance'
 import type { BadgeProps } from '@element-plus/components/badge'
 import type { CSSProperties } from 'vue'
 
-const { Close } = TypeComponents
+// const { Close } = TypeComponents
 
 defineOptions({
   name: 'ElMessage',

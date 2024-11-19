@@ -194,7 +194,7 @@
 @mixin picker-popper($background, $border, $box-shadow) {
   &.#{$namespace}-popper {
     background: $background;
-    border: $border;
+    // border: $border;
     box-shadow: $box-shadow;
 
     .#{$namespace}-popper__arrow {
