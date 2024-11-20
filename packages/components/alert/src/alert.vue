@@ -1,19 +1,12 @@
 <template>
   <transition :name="ns.b('fade')">
-    <div
-      v-show="visible"
-      :class="[ns.b(), ns.m(type), ns.is('center', center), ns.is(effect)]"
-      role="alert"
-    >
+    <div v-show="visible" :class="[ns.b(), ns.m(type), ns.is('center', center), ns.is(effect)]" role="alert">
       <el-icon v-if="showIcon && iconComponent" :icon="iconComponent" :class="iconClass">
         <!-- <component :is="iconComponent" /> -->
       </el-icon>
 
       <div :class="ns.e('content')">
-        <span
-          v-if="title || $slots.title"
-          :class="[ns.e('title'), withDescription]"
-        >
+        <span v-if="title || $slots.title" :class="[ns.e('title'), withDescription]">
           <slot name="title">{{ title }}</slot>
         </span>
         <p v-if="$slots.default || description" :class="ns.e('description')">
@@ -22,11 +15,7 @@
           </slot>
         </p>
         <template v-if="closable">
-          <div
-            v-if="closeText"
-            :class="[ns.e('close-btn'), ns.is('customed')]"
-            @click="close"
-          >
+          <div v-if="closeText" :class="[ns.e('close-btn'), ns.is('customed')]" @click="close">
             {{ closeText }}
           </div>
           <el-icon icon="icon-x-close" v-else :class="ns.e('close-btn')" @click="close">
@@ -39,7 +28,7 @@
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
 import { ElIcon } from '@element-plus/components/icon'
-import { TypeComponents, TypeComponentsMap } from '@element-plus/utils'
+import { TypeComponentsMap } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { alertEmits, alertProps } from './alert'
 

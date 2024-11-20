@@ -1,6 +1,4 @@
 import {
-  CircleCheck,
-  CircleClose,
   CircleCloseFilled,
   Close,
   InfoFilled,

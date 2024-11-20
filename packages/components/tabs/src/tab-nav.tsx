@@ -22,7 +22,6 @@ import {
 } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
 import { ElIcon } from '@element-plus/components/icon'
-import { ArrowLeft, ArrowRight, Close } from '@element-plus/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import TabBar from './tab-bar.vue'
 import { tabsRootContextKey } from './constants'
@@ -279,8 +278,7 @@ const TabNav = defineComponent({
             ]}
             onClick={scrollPrev}
           >
-            <ElIcon>
-              <ArrowLeft />
+            <ElIcon icon='icon-chevron-left'>
             </ElIcon>
           </span>,
           <span
@@ -290,8 +288,7 @@ const TabNav = defineComponent({
             ]}
             onClick={scrollNext}
           >
-            <ElIcon>
-              <ArrowRight />
+            <ElIcon icon='icon-chevron-right'>
             </ElIcon>
           </span>,
         ]

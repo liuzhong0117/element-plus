@@ -7,7 +7,6 @@ import {
   ref,
   watch,
 } from 'vue'
-import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
 import {
   buildProps,
   debugWarn,

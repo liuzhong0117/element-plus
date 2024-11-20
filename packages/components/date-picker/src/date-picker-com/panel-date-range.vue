@@ -263,12 +263,7 @@ import {
   extractTimeFormat,
 } from '@element-plus/components/time-picker'
 import ElIcon from '@element-plus/components/icon'
-import {
-  ArrowLeft,
-  ArrowRight,
-  DArrowLeft,
-  DArrowRight,
-} from '@element-plus/icons-vue'
+
 import { panelDateRangeProps } from '../props/panel-date-range'
 import { useRangePicker } from '../composables/use-range-picker'
 import { getDefaultValue, isValidRange } from '../utils'

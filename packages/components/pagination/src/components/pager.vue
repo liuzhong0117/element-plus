@@ -71,7 +71,6 @@
 </template>
 <script lang="ts" setup>
 import { computed, ref, watchEffect } from 'vue'
-import { DArrowLeft, DArrowRight, MoreFilled } from '@element-plus/icons-vue'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { paginationPagerProps } from './pager'
 defineOptions({
