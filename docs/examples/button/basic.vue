@@ -27,22 +27,14 @@
   </div>
 
   <div>
-    <el-button :icon="Search" circle />
-    <el-button type="primary" icon="icon-duration" circle />
-    <el-button type="success" :icon="Check" circle />
-    <el-button type="info" :icon="Message" circle />
-    <el-button type="warning" :icon="Star" circle />
-    <el-button type="danger" :icon="Delete" circle />
+    <el-button icon="icon-plus" circle />
+    <el-button type="primary" icon="icon-star-01" circle />
+    <el-button type="success" icon="icon-trash-01-new" circle />
+    <el-button type="info" icon="icon-Calendar-new" circle />
+    <el-button type="warning" icon="icon-keyboard" circle />
+    <el-button type="danger" icon="icon-x-circle" circle />
   </div>
 </template>
 
 <script lang="ts" setup>
-import {
-  Check,
-  Delete,
-  Edit,
-  Message,
-  Search,
-  Star,
-} from '@element-plus/icons-vue'
 </script>

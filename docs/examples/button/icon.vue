@@ -1,14 +1,14 @@
 <template>
   <div>
     <el-button type="primary" icon="icon-duration">duration</el-button>
-    <el-button type="primary" :icon="Share" />
-    <el-button type="primary" :icon="Delete" />
-    <el-button type="primary" :icon="Search">Search</el-button>
+    <el-button type="primary" icon="icon-eye" />
+    <el-button type="primary" icon="icon-trash-01-new" />
+    <el-button type="primary" icon="icon-quanshipei-sousuo">Search</el-button>
     <el-button type="primary">
-      Upload<el-icon icon="icon-duration"></el-icon>
+      <span>Upload</span>
+      <el-icon icon="icon-duration"></el-icon>
     </el-button>
   </div>
 </template>
 <script setup lang="ts">
-import { Delete, Edit, Search, Share, Upload } from '@element-plus/icons-vue'
 </script>

@@ -33,7 +33,7 @@ const currentLink = computed(() => {
   <div class="navbar-wrapper">
     <div class="header-container">
       <div class="logo-container">
-        <el-text class="mx-1" size="large" type="primary">优学院UI组件库</el-text>
+        <el-text class="mx-1" size="large" type="primary">@ulearning/element-plus</el-text>
         <!-- <a :href="currentLink">
           <img
             class="logo"

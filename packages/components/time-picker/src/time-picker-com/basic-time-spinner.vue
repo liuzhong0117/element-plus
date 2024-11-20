@@ -45,14 +45,12 @@
           :class="['arrow-up', ns.be('spinner', 'arrow')]"
           icon="icon-chevron-up"
         >
-          <arrow-up />
         </el-icon>
         <el-icon
           v-repeat-click="onIncrement"
           :class="['arrow-down', ns.be('spinner', 'arrow')]"
           icon="icon-chevron-down"
         >
-          <arrow-down />
         </el-icon>
         <ul :class="ns.be('spinner', 'list')">
           <li
@@ -85,7 +83,6 @@ import { debounce } from 'lodash-unified'
 import { vRepeatClick } from '@element-plus/directives'
 import ElScrollbar from '@element-plus/components/scrollbar'
 import ElIcon from '@element-plus/components/icon'
-import { ArrowDown, ArrowUp } from '@element-plus/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import { getStyle } from '@element-plus/utils'
 import { timeUnits } from '../constants'

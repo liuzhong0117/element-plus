@@ -14,7 +14,7 @@ import { addUnit, isUndefined } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { iconProps } from './icon'
 import type { CSSProperties } from 'vue'
-import '../../../assets/fonts/iconfont.js'
+// import '../../../assets/fonts/iconfont.js'
 
 
 defineOptions({
@@ -35,6 +35,6 @@ const style = computed<CSSProperties>(() => {
 })
 
 onMounted(() => {
-  // import('../../../assets/fonts/iconfont.js')
+  import('../../../assets/fonts/iconfont.js')
 })
 </script>

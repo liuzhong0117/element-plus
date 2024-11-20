@@ -4,7 +4,7 @@
       <span class="demonstration">hover to trigger</span>
       <el-dropdown>
         <span class="el-dropdown-link">
-          Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+          Dropdown List<el-icon class="el-icon--right" icon="icon-chevron-down"></el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -23,7 +23,7 @@
       <span class="demonstration">click to trigger</span>
       <el-dropdown trigger="click">
         <span class="el-dropdown-link">
-          Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+          Dropdown List<el-icon class="el-icon--right" icon="icon-chevron-down"></el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -42,7 +42,7 @@
       <span class="demonstration">right click to trigger</span>
       <el-dropdown trigger="contextmenu">
         <span class="el-dropdown-link">
-          Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+          Dropdown List<el-icon class="el-icon--right" icon="icon-chevron-down"></el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -62,7 +62,6 @@
 
 <script lang="ts" setup>
 import {
-  ArrowDown,
   Check,
   CircleCheck,
   CirclePlus,

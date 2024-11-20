@@ -2,7 +2,7 @@
   <div class="flex flex-wrap items-center">
     <el-dropdown>
       <el-button type="primary">
-        Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+        Dropdown List<el-icon class="el-icon--right" icon="icon-chevron-down"></el-icon>
       </el-button>
       <template #dropdown>
         <el-dropdown-menu>
@@ -30,7 +30,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowDown } from '@element-plus/icons-vue'
 
 const handleClick = () => {
   // eslint-disable-next-line no-alert

@@ -11,7 +11,7 @@
     :transition="`${nsDate.namespace.value}-zoom-in-top`"
     :popper-class="[`${nsDate.namespace.value}-picker__popper`, popperClass]"
     :popper-options="elPopperOptions"
-    :fallback-placements="['bottom', 'top', 'right', 'left']"
+    :fallback-placements="['bottom-start','top-start','bottom', 'top', 'right', 'left']"
     :gpu-acceleration="false"
     :stop-popper-mouse-event="false"
     :hide-after="0"

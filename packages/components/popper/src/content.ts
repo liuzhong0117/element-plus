@@ -45,7 +45,7 @@ export const popperCoreConfigProps = buildProps({
   placement: {
     type: String,
     values: placements,
-    default: 'bottom',
+    default: 'bottom-start',
   },
   /**
    * @description [popper.js](https://popper.js.org/docs/v2/) parameters

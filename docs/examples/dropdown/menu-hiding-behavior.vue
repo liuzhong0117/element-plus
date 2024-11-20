@@ -1,7 +1,7 @@
 <template>
   <el-dropdown :hide-on-click="false">
     <span class="el-dropdown-link">
-      Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+      Dropdown List<el-icon class="el-icon--right" icon="icon-chevron-down"></el-icon>
     </span>
     <template #dropdown>
       <el-dropdown-menu>
@@ -17,7 +17,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowDown } from '@element-plus/icons-vue'
 </script>
 <style scoped>
 .example-showcase .el-dropdown + .el-dropdown {
