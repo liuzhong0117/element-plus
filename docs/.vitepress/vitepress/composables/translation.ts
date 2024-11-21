@@ -42,13 +42,14 @@ export const useTranslation = () => {
 
   const switchLang = (targetLang: string) => {
     if (lang.value === targetLang) return
-
+    console.log(language)
     language.value = targetLang
+    console.log(route.path)
+    // const firstSlash = route.path.indexOf('/', 1)
 
-    const firstSlash = route.path.indexOf('/', 1)
-
-    const goTo = `/${targetLang}/${route.path.slice(firstSlash + 1)}`
-
+    // const goTo = `/${targetLang}/${route.path.slice(firstSlash + 1)}`
+    let arr = route.path.split(lang.value)
+    const goTo = arr[0] + targetLang + arr[1]
     router.go(goTo)
 
     if (isClient) {

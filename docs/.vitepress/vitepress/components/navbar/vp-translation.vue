@@ -27,9 +27,9 @@ const toTranslation = () => {
             >
               {{ languageMap[l] }}
             </ElDropdownItem>
-            <ElDropdownItem class="language selected" @click="toTranslation">
+            <!-- <ElDropdownItem class="language selected" @click="toTranslation">
               {{ locale.help }}
-            </ElDropdownItem>
+            </ElDropdownItem> -->
           </ElDropdownMenu>
         </template>
       </ElDropdown>

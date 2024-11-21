@@ -24,10 +24,6 @@
         "text": "Color"
       },
       {
-        "link": "/icon",
-        "text": "Icon"
-      },
-      {
         "link": "/scrollbar",
         "text": "Scrollbar"
       }

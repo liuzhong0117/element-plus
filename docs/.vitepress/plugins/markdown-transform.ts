@@ -140,7 +140,7 @@ ${linksText}`
 
 <Contributors id="${componentId}" />`
 
-  append.footers.push(sourceSection, isComponent ? contributorsSection : '')
+  // append.footers.push(sourceSection, isComponent ? contributorsSection : '')
 
   return code
 }
