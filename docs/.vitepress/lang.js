@@ -18,15 +18,15 @@
   localStorage.setItem(cacheKey, language)
   userPreferredLang = language
   console.log('---------' + userPreferredLang)
-  if (!location.pathname.startsWith(`/element-plus/${userPreferredLang}`)) {
-    const toPath = [`/${userPreferredLang}`]
-      .concat(location.pathname.split('/').slice(2))
-      .join('/')
-    location.pathname =
-      toPath.endsWith('.html') || toPath.endsWith('/')
-        ? toPath
-        : toPath.concat('/')
-  }
+  // if (!location.pathname.startsWith(`/element-plus/${userPreferredLang}`)) {
+  //   const toPath = [`/${userPreferredLang}`]
+  //     .concat(location.pathname.split('/').slice(2))
+  //     .join('/')
+  //   location.pathname =
+  //     toPath.endsWith('.html') || toPath.endsWith('/')
+  //       ? toPath
+  //       : toPath.concat('/')
+  // }
   if (navigator && navigator.serviceWorker.controller) {
     navigator.serviceWorker.controller.postMessage({
       type: 'LANG',

@@ -1,0 +1,140 @@
+{
+  "overview": {
+    "text": "Overview 组件总览",
+    "children": [
+      {
+        "link": "/overview",
+        "text": "Overview 组件总览"
+      }
+    ]
+  },
+  "basic": {
+    "text": "Basic 基础组件",
+    "children": [
+      {
+        "link": "/button",
+        "text": "Button 按钮"
+      },
+      {
+        "link": "/border",
+        "text": "Border 边框"
+      },
+      {
+        "link": "/color",
+        "text": "Color 色彩"
+      },
+      {
+        "link": "/scrollbar",
+        "text": "Scrollbar 滚动条"
+      }
+    ]
+  },
+  "form": {
+    "text": "Form 表单组件",
+    "children": [
+      {
+        "link": "/checkbox",
+        "text": "Checkbox 多选框"
+      },
+      {
+        "link": "/date-picker",
+        "text": "Date Picker 日期选择器"
+      },
+      {
+        "link": "/datetime-picker",
+        "text": "DateTime Picker 日期时间选择器"
+      },
+      {
+        "link": "/form",
+        "text": "Form 表单"
+      },
+      {
+        "link": "/input",
+        "text": "Input 输入框"
+      },
+      {
+        "link": "/radio",
+        "text": "Radio 单选框"
+      },
+      {
+        "link": "/select",
+        "text": "Select 选择器"
+      },
+      {
+        "link": "/switch",
+        "text": "Switch 开关"
+      },
+      {
+        "link": "/time-picker",
+        "text": "Time Picker 时间选择器"
+      }
+    ]
+  },
+  "data": {
+    "text": "Data 数据展示",
+    "children": [
+      {
+        "link": "/empty",
+        "text": "Empty 空状态"
+      },
+      {
+        "link": "/image",
+        "text": "Image 图片"
+      },
+      {
+        "link": "/infinite-scroll",
+        "text": "Infinite Scroll 无限滚动"
+      },
+      {
+        "link": "/pagination",
+        "text": "Pagination 分页"
+      },
+      {
+        "link": "/table",
+        "text": "Table 表格"
+      },
+      {
+        "link": "/tag",
+        "text": "Tag 标签"
+      }
+    ]
+  },
+  "navigation": {
+    "text": "Navigation 导航",
+    "children": [
+      {
+        "link": "/dropdown",
+        "text": "Dropdown 下拉菜单"
+      },
+      {
+        "link": "/tabs",
+        "text": "Tabs 标签页"
+      }
+    ]
+  },
+  "feedback": {
+    "text": "Feedback 反馈组件",
+    "children": [
+      {
+        "link": "/alert",
+        "text": "Alert 提示"
+      },
+      {
+        "link": "/dialog",
+        "text": "Dialog 对话框"
+      },
+      {
+        "link": "/loading",
+        "text": "Loading 加载"
+      },
+      {
+        "link": "/message",
+        "text": "Message 消息提示"
+      },
+      {
+        "link": "/message-box",
+        "text": "Message Box 消息弹出框"
+      }
+    ]
+  }
+}
