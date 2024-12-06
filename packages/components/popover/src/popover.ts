@@ -72,14 +72,14 @@ export const popoverProps = buildProps({
    */
   width: {
     type: [String, Number],
-    default: 150,
+    default: 200,
   },
   /**
    * @description popover offset
    */
   offset: {
     type: Number,
-    default: undefined,
+    default: 10,
   },
   /**
    * @description delay of appearance, in millisecond

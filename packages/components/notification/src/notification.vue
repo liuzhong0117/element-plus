@@ -14,8 +14,7 @@
       @mouseleave="startTimer"
       @click="onClick"
     >
-      <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
-        <component :is="iconComponent" />
+      <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]" :icon="iconComponent">
       </el-icon>
       <div :class="ns.e('group')">
         <h2 :class="ns.e('title')" v-text="title" />
@@ -30,8 +29,7 @@
             <p v-else v-html="message" />
           </slot>
         </div>
-        <el-icon v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close">
-          <Close />
+        <el-icon v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close" icon="icon-x-close">
         </el-icon>
       </div>
     </div>

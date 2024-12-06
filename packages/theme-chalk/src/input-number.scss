@@ -29,6 +29,13 @@
     }
   }
 
+  &:has(.is-focus) {
+    @include e((increase, decrease)) {
+      top: 2px;
+      bottom: 2px;
+    }
+  }
+
   @include e((increase, decrease)) {
     display: flex;
     justify-content: center;
@@ -44,7 +51,7 @@
     background: getCssVar('fill-color', 'light');
     color: getCssVar('text-color', 'regular');
     cursor: pointer;
-    font-size: 13px;
+    font-size: 14px;
     user-select: none;
 
     &:hover {
@@ -67,14 +74,14 @@
   }
 
   @include e(increase) {
-    right: 1px;
+    right: 2px;
     border-radius: 0 getCssVar('border-radius-base')
       getCssVar('border-radius-base') 0;
     border-left: getCssVar('border');
   }
 
   @include e(decrease) {
-    left: 1px;
+    left: 2px;
     border-radius: getCssVar('border-radius-base') 0 0
       getCssVar('border-radius-base');
     border-right: getCssVar('border');
@@ -99,7 +106,7 @@
 
       @include e((increase, decrease)) {
         width: map.get($input-height, $size);
-        font-size: map.get($input-font-size, $size);
+        font-size: map.get($input-number-icon-size, $size);
       }
 
       .#{$namespace}-input--#{$size} {
@@ -154,7 +161,7 @@
     }
 
     @include e(decrease) {
-      right: 1px;
+      right: 2px;
       top: auto;
       left: auto;
       border-right: none;

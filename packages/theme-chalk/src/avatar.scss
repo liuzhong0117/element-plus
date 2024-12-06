@@ -13,6 +13,16 @@
     map.get($avatar-size, 'default')
   );
 
+  @include set-css-var-value(
+    ('avatar', 'icon-size'),
+    map.get($avatar-icon-size, 'default')
+  );
+
+  @include set-css-var-value(
+    ('avatar', 'border-radius'),
+    map.get($avatar-border-radius, 'default')
+  );
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +34,7 @@
   width: getCssVar('avatar', 'size');
   height: getCssVar('avatar', 'size');
   font-size: getCssVar('avatar', 'text-size');
+  font-weight: 500;
 
   > img {
     display: block;
@@ -48,6 +59,14 @@
       @include set-css-var-value(
         ('avatar', 'size'),
         map.get($avatar-size, $size)
+      );
+      @include set-css-var-value(
+        ('avatar', 'icon-size'),
+        map.get($avatar-icon-size, $size)
+      );
+      @include set-css-var-value(
+        ('avatar', 'border-radius'),
+        map.get($avatar-border-radius, $size)
       );
     }
   }

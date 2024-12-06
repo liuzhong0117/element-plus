@@ -24,6 +24,10 @@
         "text": "Color 色彩"
       },
       {
+        "link": "/link",
+        "text": "Link 链接"
+      },
+      {
         "link": "/scrollbar",
         "text": "Scrollbar 滚动条"
       }
@@ -53,6 +57,10 @@
         "text": "Input 输入框"
       },
       {
+        "link": "/input-number",
+        "text": "Input Number 数字输入框"
+      },
+      {
         "link": "/radio",
         "text": "Radio 单选框"
       },
@@ -74,6 +82,10 @@
     "text": "Data 数据展示",
     "children": [
       {
+        "link": "/avatar",
+        "text": "Avatar 头像"
+      },
+      {
         "link": "/empty",
         "text": "Empty 空状态"
       },
@@ -90,6 +102,10 @@
         "text": "Pagination 分页"
       },
       {
+        "link": "/progress",
+        "text": "Progress 进度条"
+      },
+      {
         "link": "/table",
         "text": "Table 表格"
       },
@@ -102,6 +118,10 @@
   "navigation": {
     "text": "Navigation 导航",
     "children": [
+      {
+        "link": "/breadcrumb",
+        "text": "Breadcrumb 面包屑"
+      },
       {
         "link": "/dropdown",
         "text": "Dropdown 下拉菜单"
@@ -134,6 +154,22 @@
       {
         "link": "/message-box",
         "text": "Message Box 消息弹出框"
+      },
+      {
+        "link": "/notification",
+        "text": "Notification 通知"
+      },
+      {
+        "link": "/popconfirm",
+        "text": "Popconfirm 气泡确认框"
+      },
+      {
+        "link": "/popover",
+        "text": "Popover 弹出框"
+      },
+      {
+        "link": "/tooltip",
+        "text": "Tooltip 文字提示"
       }
     ]
   }

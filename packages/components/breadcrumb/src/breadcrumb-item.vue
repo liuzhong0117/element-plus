@@ -8,8 +8,7 @@
     >
       <slot />
     </span>
-    <el-icon v-if="breadcrumbContext?.separatorIcon" :class="ns.e('separator')">
-      <component :is="breadcrumbContext.separatorIcon" />
+    <el-icon v-if="breadcrumbContext?.separatorIcon" :class="ns.e('separator')" :icon="breadcrumbContext.separatorIcon">
     </el-icon>
     <span v-else :class="ns.e('separator')" role="presentation">
       {{ breadcrumbContext?.separator }}

@@ -23,6 +23,7 @@
       :gpu-acceleration="false"
       :persistent="persistent"
       :show-arrow="false"
+      :offset="6"
       @before-show="handleMenuEnter"
       @hide="states.isBeforeHide = false"
     >

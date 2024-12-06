@@ -1,6 +1,6 @@
 {
-  "name": "@element-plus/build",
-  "version": "0.0.1",
+  "name": "@ulearning/element-plus",
+  "version": "0.0.3",
   "private": true,
   "description": "Build Toolchain for Element Plus",
   "main": "./dist/index.cjs",

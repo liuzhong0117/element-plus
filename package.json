@@ -1,25 +1,7 @@
 {
-  "name": "ulearning-plus",
+  "name": "@ulearning/element-plus",
   "version": "0.0.01",
   "description": "优学院UI组件库",
-  "main": "dist/index.full.min.js",
-  "files": [
-    "dist",
-    "es",
-    "lib",
-    "theme-chalk",
-    "global.d.ts"
-  ],
-  "keywords": [
-    "ulearning-plus",
-    "ulearning",
-    "component library",
-    "ui framework",
-    "ui",
-    "vue"
-  ],
-  "author": "ulearning",
-  "license": "ISC",
   "private": false,
   "packageManager": "pnpm@8.14.1",
   "workspaces": [

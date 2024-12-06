@@ -1,5 +1,4 @@
 import { buttonTypes } from '@element-plus/components/button'
-import { QuestionFilled } from '@element-plus/icons-vue'
 import { buildProps, iconPropType } from '@element-plus/utils'
 import { useTooltipContentProps } from '@element-plus/components/tooltip'
 import type { ExtractPropTypes } from 'vue'
@@ -39,7 +38,7 @@ export const popconfirmProps = buildProps({
    */
   icon: {
     type: iconPropType,
-    default: () => QuestionFilled,
+    default: () => 'icon-info-fill',
   },
   /**
    * @description Icon color
@@ -63,6 +62,20 @@ export const popconfirmProps = buildProps({
     default: 200,
   },
   /**
+  * @description popover offset
+  */
+  offset: {
+    type: Number,
+    default: 10,
+  },
+  /**
+   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper)
+   */
+  showArrow: {
+    type: Boolean,
+    default: true,
+  },
+  /**
    * @description whether popconfirm is teleported to the body
    */
   teleported: useTooltipContentProps.teleported,
@@ -75,7 +88,7 @@ export const popconfirmProps = buildProps({
    */
   width: {
     type: [String, Number],
-    default: 150,
+    default: 240,
   },
 } as const)
 

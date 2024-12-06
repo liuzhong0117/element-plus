@@ -21,6 +21,7 @@
   cursor: pointer;
   padding: 0;
   font-size: getCssVar('link', 'font-size');
+  line-height: getCssVar('link', 'line-height');
   font-weight: getCssVar('link', 'font-weight');
 
   color: getCssVar('link', 'text-color');
@@ -46,9 +47,9 @@
     cursor: not-allowed;
   }
 
-  & [class*='#{$namespace}-icon-'] {
+  .#{$namespace}-icon {
     & + span {
-      margin-left: 5px;
+      margin-left: 6px;
     }
   }
 
@@ -69,11 +70,11 @@
       @include css-var-from-global(('link', 'text-color'), ('color', $type));
       @include css-var-from-global(
         ('link', 'hover-text-color'),
-        ('color', $type, 'light-3')
+        ('color', $type, 'light-2')
       );
       @include css-var-from-global(
         ('link', 'disabled-text-color'),
-        ('color', $type, 'light-5')
+        ('color', $type, 'light-4')
       );
 
       &:after {

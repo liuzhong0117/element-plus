@@ -1,7 +1,7 @@
 <template>
   <div class="demo-type">
     <div>
-      <el-avatar :icon="UserFilled" />
+      <el-avatar icon="icon-person-number_stroke" />
     </div>
     <div>
       <el-avatar

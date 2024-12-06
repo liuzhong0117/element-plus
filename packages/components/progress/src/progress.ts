@@ -64,7 +64,7 @@ export const progressProps = buildProps({
    */
   width: {
     type: Number,
-    default: 126,
+    default: 120,
   },
   /**
    * @description whether to show percentage

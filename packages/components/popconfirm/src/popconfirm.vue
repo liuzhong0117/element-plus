@@ -6,6 +6,8 @@
     v-bind="$attrs"
     :popper-class="`${ns.namespace.value}-popover`"
     :popper-style="style"
+    :offset="offset"
+    :show-arrow="showArrow"
     :teleported="teleported"
     :fallback-placements="['bottom', 'top', 'right', 'left']"
     :hide-after="hideAfter"
@@ -18,8 +20,8 @@
             v-if="!hideIcon && icon"
             :class="ns.e('icon')"
             :style="{ color: iconColor }"
+            :icon="icon"
           >
-            <component :is="icon" />
           </el-icon>
           {{ title }}
         </div>

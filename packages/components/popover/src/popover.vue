@@ -14,7 +14,7 @@
     :show-after="showAfter"
     :hide-after="hideAfter"
     :auto-close="autoClose"
-    :show-arrow="showArrow && false"
+    :show-arrow="showArrow"
     :aria-label="title"
     :effect="effect"
     :enterable="enterable"

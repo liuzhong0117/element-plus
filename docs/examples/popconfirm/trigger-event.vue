@@ -2,7 +2,7 @@
   <el-popconfirm
     confirm-button-text="Yes"
     cancel-button-text="No"
-    :icon="InfoFilled"
+    icon="icon-info-fill"
     icon-color="#626AEF"
     title="Are you sure to delete this?"
     @confirm="confirmEvent"
@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import { InfoFilled } from '@element-plus/icons-vue'
 
 const confirmEvent = () => {
   console.log('confirm!')

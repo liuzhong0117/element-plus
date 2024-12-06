@@ -18,10 +18,8 @@
       @keydown.enter="decrease"
     >
       <slot name="decrease-icon">
-        <el-icon>
-          <arrow-down v-if="controlsAtRight" />
-          <minus v-else />
-        </el-icon>
+        <el-icon icon="icon-chevron-down" v-if="controlsAtRight"></el-icon>
+        <el-icon icon="icon-minus" v-else></el-icon>
       </slot>
     </span>
     <span
@@ -33,10 +31,8 @@
       @keydown.enter="increase"
     >
       <slot name="increase-icon">
-        <el-icon>
-          <arrow-up v-if="controlsAtRight" />
-          <plus v-else />
-        </el-icon>
+        <el-icon icon="icon-chevron-up" v-if="controlsAtRight"></el-icon>
+        <el-icon icon="icon-plus" v-else></el-icon>
       </slot>
     </span>
     <el-input
@@ -82,7 +78,6 @@ import {
   isUndefined,
   throwError,
 } from '@element-plus/utils'
-import { ArrowDown, ArrowUp, Minus, Plus } from '@element-plus/icons-vue'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,

@@ -24,6 +24,10 @@
         "text": "Color"
       },
       {
+        "link": "/link",
+        "text": "Link"
+      },
+      {
         "link": "/scrollbar",
         "text": "Scrollbar"
       }
@@ -53,6 +57,10 @@
         "text": "Input"
       },
       {
+        "link": "/input-number",
+        "text": "Input Number"
+      },
+      {
         "link": "/radio",
         "text": "Radio"
       },
@@ -74,6 +82,10 @@
     "text": "Data",
     "children": [
       {
+        "link": "/avatar",
+        "text": "Avatar"
+      },
+      {
         "link": "/empty",
         "text": "Empty"
       },
@@ -90,6 +102,10 @@
         "text": "Pagination"
       },
       {
+        "link": "/progress",
+        "text": "Progress"
+      },
+      {
         "link": "/table",
         "text": "Table"
       },
@@ -102,6 +118,10 @@
   "navigation": {
     "text": "Navigation",
     "children": [
+      {
+        "link": "/breadcrumb",
+        "text": "Breadcrumb"
+      },
       {
         "link": "/dropdown",
         "text": "Dropdown"
@@ -128,8 +148,24 @@
         "text": "Loading"
       },
       {
+        "link": "/notification",
+        "text": "Notification"
+      },
+      {
         "link": "/message-box",
         "text": "Message Box"
+      },
+      {
+        "link": "/popconfirm",
+        "text": "Popconfirm"
+      },
+      {
+        "link": "/popover",
+        "text": "Popover"
+      },
+      {
+        "link": "/tooltip",
+        "text": "Tooltip"
       }
     ]
   }
