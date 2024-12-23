@@ -4,7 +4,8 @@
     :visible="showPicker"
     :show-arrow="false"
     :fallback-placements="['bottom', 'top', 'right', 'left']"
-    :offset="0"
+    placement="bottom"
+    :offset="2"
     :gpu-acceleration="false"
     :popper-class="[ns.be('picker', 'panel'), ns.b('dropdown'), popperClass]"
     :stop-popper-mouse-event="false"
@@ -88,15 +89,15 @@
             >
               <el-icon
                 v-show="modelValue || showPanelColor"
+                icon="icon-chevron-down"
                 :class="[ns.be('picker', 'icon'), ns.is('icon-arrow-down')]"
               >
-                <arrow-down />
               </el-icon>
               <el-icon
                 v-show="!modelValue && !showPanelColor"
+                icon="icon-x-close"
                 :class="[ns.be('picker', 'empty'), ns.is('icon-close')]"
               >
-                <close />
               </el-icon>
             </span>
           </span>
@@ -136,7 +137,6 @@ import {
 } from '@element-plus/hooks'
 import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import { debugWarn } from '@element-plus/utils'
-import { ArrowDown, Close } from '@element-plus/icons-vue'
 import AlphaSlider from './components/alpha-slider.vue'
 import HueSlider from './components/hue-slider.vue'
 import Predefine from './components/predefine.vue'

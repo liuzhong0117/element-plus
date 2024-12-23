@@ -94,10 +94,10 @@ defineOptions({
 })
 
 const STATUS_COLOR_MAP: Record<string, string> = {
-  success: '#13ce66',
-  exception: '#ff4949',
-  warning: '#e6a23c',
-  default: '#20a0ff',
+  success: '#17B26A',
+  exception: '#F04438',
+  warning: '#F79009',
+  default: '#2970FF',
 }
 
 const props = defineProps(progressProps)
@@ -185,8 +185,8 @@ const statusIcon = computed(() => {
 
 const progressTextSize = computed(() => {
   return props.type === 'line'
-    ? 12 + props.strokeWidth * 0.4
-    : props.width * 0.111111 + 2
+    ? 12
+    : 'auto'
 })
 
 const content = computed(() => props.format(props.percentage))

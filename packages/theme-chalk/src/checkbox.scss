@@ -238,7 +238,7 @@ $checkbox-bordered-input-width: map.merge(
     background-color 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46),
     outline 0.25s cubic-bezier(0.71, -0.46, 0.29, 1.46);
     font-size: 0;
-
+    line-height: 1;
     &:hover {
       border-color: getCssVar('checkbox-input-border-color-hover');
     }

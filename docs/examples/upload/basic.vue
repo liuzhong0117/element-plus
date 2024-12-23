@@ -2,13 +2,14 @@
   <el-upload
     v-model:file-list="fileList"
     class="upload-demo"
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+    action="#fake"
     multiple
     :on-preview="handlePreview"
     :on-remove="handleRemove"
     :before-remove="beforeRemove"
     :limit="3"
     :on-exceed="handleExceed"
+    :http-request="uploadFile"
   >
     <el-button type="primary">Click to upload</el-button>
     <template #tip>
@@ -58,5 +59,17 @@ const beforeRemove: UploadProps['beforeRemove'] = (uploadFile, uploadFiles) => {
     () => true,
     () => false
   )
+}
+
+const uploadFile = (option) =>{
+  console.log(option)
+  option.file.percent = 60
+  option.onProgress(option.file)
+  setTimeout(() => {
+    option.onSuccess(option.file)
+    fileList.value.forEach(element => {
+      console.log(element.name)
+    });
+  }, 3000);
 }
 </script>

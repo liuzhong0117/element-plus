@@ -37,8 +37,16 @@
     "text": "Form 表单组件",
     "children": [
       {
+        "link": "/cascader",
+        "text": "Cascader 级联选择器"
+      },
+      {
         "link": "/checkbox",
         "text": "Checkbox 多选框"
+      },
+      {
+        "link": "/color-picker",
+        "text": "Color Picker 取色器"
       },
       {
         "link": "/date-picker",
@@ -69,12 +77,20 @@
         "text": "Select 选择器"
       },
       {
+        "link": "/slider",
+        "text": "Slider 滑块"
+      },
+      {
         "link": "/switch",
         "text": "Switch 开关"
       },
       {
         "link": "/time-picker",
         "text": "Time Picker 时间选择器"
+      },
+      {
+        "link": "/upload",
+        "text": "Upload 上传"
       }
     ]
   },

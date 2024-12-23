@@ -41,8 +41,7 @@
       -->
       <span />
     </el-radio>
-    <el-icon v-else-if="isLeaf && node.checked" :class="ns.e('prefix')">
-      <check />
+    <el-icon v-else-if="isLeaf && node.checked" :class="ns.e('prefix')" icon="icon-check">
     </el-icon>
 
     <!-- content -->
@@ -53,8 +52,7 @@
       <el-icon v-if="node.loading" :class="[ns.is('loading'), ns.e('postfix')]">
         <loading />
       </el-icon>
-      <el-icon v-else :class="['arrow-right', ns.e('postfix')]">
-        <arrow-right />
+      <el-icon v-else :class="['arrow-right', ns.e('postfix')]" icon="icon-chevron-right">
       </el-icon>
     </template>
   </li>

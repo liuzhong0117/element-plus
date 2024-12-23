@@ -37,8 +37,16 @@
     "text": "Form",
     "children": [
       {
+        "link": "/cascader",
+        "text": "Cascader"
+      },
+      {
         "link": "/checkbox",
         "text": "Checkbox"
+      },
+      {
+        "link": "/color-picker",
+        "text": "Color Picker"
       },
       {
         "link": "/date-picker",
@@ -69,12 +77,20 @@
         "text": "Select"
       },
       {
+        "link": "/slider",
+        "text": "Slider"
+      },
+      {
         "link": "/switch",
         "text": "Switch"
       },
       {
         "link": "/time-picker",
         "text": "Time Picker"
+      },
+      {
+        "link": "/upload",
+        "text": "Upload"
       }
     ]
   },

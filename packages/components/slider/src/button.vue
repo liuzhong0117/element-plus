@@ -19,6 +19,9 @@
       :stop-popper-mouse-event="false"
       :popper-class="tooltipClass"
       :disabled="!showTooltip"
+      effect="light"
+      :show-arrow="false"
+      :offset="6"
       persistent
     >
       <template #content>

@@ -99,7 +99,7 @@
 
     @include when(focus) {
       .#{$namespace}-input__wrapper {
-        box-shadow: 0 0 0 1px
+        box-shadow: 0 0 0 2px
           var(
             #{getCssVarName('input', 'focus-border-color')},
             map.get($input, 'focus-border-color')

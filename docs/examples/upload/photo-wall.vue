@@ -1,10 +1,11 @@
 <template>
   <el-upload
     v-model:file-list="fileList"
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+    action="#fake"
     list-type="picture-card"
     :on-preview="handlePictureCardPreview"
     :on-remove="handleRemove"
+    :http-request="uploadFile"
   >
     <el-icon><Plus /></el-icon>
   </el-upload>
@@ -65,5 +66,16 @@ const handleRemove: UploadProps['onRemove'] = (uploadFile, uploadFiles) => {
 const handlePictureCardPreview: UploadProps['onPreview'] = (uploadFile) => {
   dialogImageUrl.value = uploadFile.url!
   dialogVisible.value = true
+}
+const uploadFile = (option) =>{
+  console.log(option)
+  option.file.percent = 60
+  option.onProgress(option.file)
+  setTimeout(() => {
+    option.onSuccess(option.file)
+    fileList.value.forEach(element => {
+      console.log(element.name)
+    });
+  }, 3000);
 }
 </script>
