@@ -12,7 +12,10 @@ export const emptyProps = buildProps({
   /**
    * @description image size (width) of empty
    */
-  imageSize: Number,
+  imageSize: {
+    type: Number,
+    default: 160
+  },
   /**
    * @description description of empty
    */

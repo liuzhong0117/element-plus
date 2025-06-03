@@ -74,7 +74,7 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 2px;
+      height: 1px;
       background-color: getCssVar('border-color-light');
       z-index: getCssVar('index-normal');
     }
@@ -429,7 +429,7 @@
 
       &::after {
         height: 100%;
-        width: 2px;
+        width: 1px;
         bottom: auto;
         top: 0;
       }

@@ -147,8 +147,8 @@ $checkbox-bordered-input-width: map.merge(
             'checkbox-disabled-checked-input-border-color'
           );
 
-          &::after {
-            border-color: getCssVar('checkbox-disabled-checked-icon-color');
+          i {
+            color: getCssVar('checkbox-disabled-checked-icon-color');
           }
         }
       }

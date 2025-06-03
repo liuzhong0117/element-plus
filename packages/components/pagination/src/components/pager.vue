@@ -23,8 +23,10 @@
       @focus="onFocus(true)"
       @blur="quickPrevFocus = false"
     >
-      <d-arrow-left v-if="(quickPrevHover || quickPrevFocus) && !disabled" />
-      <more-filled v-else />
+      <!-- <d-arrow-left v-if="(quickPrevHover || quickPrevFocus) && !disabled" />
+      <more-filled v-else /> -->
+      <el-icon v-if="(quickPrevHover || quickPrevFocus) && !disabled"  icon="icon-chevron-left-double"></el-icon>
+      <el-icon v-else icon="icon-dots-horizontal-new"></el-icon>
     </li>
     <li
       v-for="pager in pagers"
