@@ -235,6 +235,7 @@
         min-height: map.get($input-height, $size);
         line-height: map.get($select-item-height, $size);
         font-size: map.get($input-font-size, $size);
+        border-radius: map.get($input-border-radius, $size);
       }
 
       @include e(selection) {

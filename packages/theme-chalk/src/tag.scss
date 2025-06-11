@@ -84,7 +84,7 @@ $tag-icon-span-gap: map.merge(
   white-space: nowrap;
 
   @include set-css-var-value('icon-size', 14px);
-  @include genTheme('light-9', 'light-8', '');
+  @include genTheme('light-9', 'light-5', '');
 
   @include when(hit) {
     border-color: getCssVar('color', 'primary');

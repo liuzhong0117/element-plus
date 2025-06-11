@@ -98,6 +98,7 @@
   @include e(title) {
     line-height: getCssVar('dialog-font-line-height');
     font-size: getCssVar('dialog-title-font-size');
+    font-weight: 600;
     color: getCssVar('text-color', 'primary');
   }
 

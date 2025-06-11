@@ -9,9 +9,17 @@ Used for marking and selection.
 
 ## Basic usage
 
-:::demo Use the `type` attribute to define Tag's type. In addition, the `color` attribute can be used to set the background color of the Tag.
+:::demo Use the `type` attribute to define Tag's type. In addition, the `color` attribute can be used to set the color of the Tag.
 
 tag/basic
+
+:::
+
+## Color usage
+
+:::demo Use the `color` attribute to define Tag's color. 
+
+tag/color
 
 :::
 
@@ -83,7 +91,7 @@ tag/checkable
 | closable            | whether Tag can be removed           | ^[boolean]                                                         | false   |
 | disable-transitions | whether to disable animations        | ^[boolean]                                                         | false   |
 | hit                 | whether Tag has a highlighted border | ^[boolean]                                                         | false   |
-| color               | background color of the Tag          | ^[string]                                                          | —       |
+| color               | color of the Tag                     | ^[string]                                                          | —       |
 | size                | size of Tag                          | ^[enum]`'large' \| 'default' \| 'small'`                           | —       |
 | effect              | theme of Tag                         | ^[enum]`'dark' \| 'light' \| 'plain'`                              | light   |
 | round               | whether Tag is rounded               | ^[boolean]                                                         | false   |

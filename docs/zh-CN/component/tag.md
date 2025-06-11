@@ -9,9 +9,17 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 由 `type` 属性来选择 tag 的类型。 也可以通过 `color` 属性来自定义背景色。
+:::demo 由 `type` 属性来选择 tag 的类型。 也可以通过 `color` 属性来自定义颜色。
 
 tag/basic
+
+:::
+
+## 自定义颜色
+
+:::demo 由 `color` 属性来选择 tag 的颜色。
+
+tag/color
 
 :::
 
@@ -83,7 +91,7 @@ tag/checkable
 | closable            | 是否可关闭     | ^[boolean]                                                             | false   |
 | disable-transitions | 是否禁用渐变动画  | ^[boolean]                                                             | false   |
 | hit                 | 是否有边框描边   | ^[boolean]                                                             | false   |
-| color               | 背景色       | ^[string]                                                              | —       |
+| color               | Tag 的颜色       | ^[string]                                                              | —       |
 | size                | Tag 的尺寸   | ^[enum]`'large' \| 'default' \| 'small'`                             | —       |
 | effect              | Tag 的主题   | ^[enum]`'dark' \| 'light' \| 'plain'`                                | light   |
 | round               | Tag 是否为圆形 | ^[boolean]                                                             | false   |

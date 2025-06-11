@@ -12,10 +12,10 @@ const { copyColor } = useCopyColor()
 <template>
   <el-row :gutter="12">
     <el-col :span="10" :xs="{ span: 12 }">
-      <div class="demo-color-box" :style="{ background: primary }">
+      <div class="demo-color-box" :style="{ background: 'var(--el-color-primary)' }">
         Brand Color
         <div class="value" text="xs">{{ primary.toUpperCase() }}</div>
-        <div class="bg-color-sub" :style="{ background: primary }">
+        <div class="bg-color-sub" :style="{ background: 'var(--el-color-primary)' }">
           <div
             v-for="level in colorLevel"
             :key="level"

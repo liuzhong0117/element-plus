@@ -128,6 +128,11 @@
       {
         "link": "/tag",
         "text": "Tag"
+      },
+      {
+        "link": "/segmented",
+        "text": "Segmented",
+        "promotion": "2.7.0"
       }
     ]
   },
@@ -158,6 +163,10 @@
       {
         "link": "/dialog",
         "text": "Dialog"
+      },
+      {
+        "link": "/drawer",
+        "text": "Drawer"
       },
       {
         "link": "/loading",

@@ -10,7 +10,7 @@ $segmented-border-radius: map.merge(
   (
     'large': map.get($button-border-radius, 'large'),
     'default': map.get($button-border-radius, 'default'),
-    'small': map.get($button-border-radius, 'small'),
+    'small': map.get($button-border-radius, 'default'),
   ),
   $segmented-border-radius
 );
@@ -18,9 +18,9 @@ $segmented-border-radius: map.merge(
 $segmented-font-size: () !default;
 $segmented-font-size: map.merge(
   (
-    'large': 16px,
+    'large': 14px,
     'default': 14px,
-    'small': 14px,
+    'small': 12px,
   ),
   $segmented-font-size
 );
@@ -28,9 +28,9 @@ $segmented-font-size: map.merge(
 $segmented-item-padding: () !default;
 $segmented-item-padding: map.merge(
   (
-    'large': 0 11px,
-    'default': 0 11px,
-    'small': 0 7px,
+    'large': 0 20px,
+    'default': 0 16px,
+    'small': 0 12px,
   ),
   $segmented-item-padding
 );
@@ -64,7 +64,8 @@ $segmented-item-padding: map.merge(
     background: getCssVar('segmented-item-selected-bg-color');
     height: 100%;
     width: 10px;
-    border-radius: calc(#{map.get($segmented-border-radius, 'default')} - 2px);
+    // border-radius: calc(#{map.get($segmented-border-radius, 'default')} - 2px);
+    border-radius: getCssVar('border-radius', 'base');
     transition: all 0.3s;
     pointer-events: none;
 
@@ -89,7 +90,8 @@ $segmented-item-padding: map.merge(
     align-items: center;
     flex: 1;
     cursor: pointer;
-    border-radius: calc(#{map.get($segmented-border-radius, 'default')} - 2px);
+    // border-radius: calc(#{map.get($segmented-border-radius, 'default')} - 2px);
+    border-radius: getCssVar('border-radius', 'base');
     padding: map.get($segmented-item-padding, 'default');
 
     &:not(.is-disabled):not(.is-selected):hover {
@@ -152,7 +154,7 @@ $segmented-item-padding: map.merge(
       }
 
       @include e(item) {
-        border-radius: calc(#{map.get($segmented-border-radius, $size)} - 2px);
+        // border-radius: calc(#{map.get($segmented-border-radius, $size)} - 2px);
         padding: map.get($segmented-item-padding, $size);
       }
     }

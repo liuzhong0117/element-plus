@@ -5,6 +5,7 @@
       v-for="item in items"
       :key="item.label"
       :type="item.type"
+      :color="item.color"
       effect="dark"
     >
       {{ item.label }}
@@ -16,6 +17,7 @@
       v-for="item in items"
       :key="item.label"
       :type="item.type"
+      :color="item.color"
       effect="light"
     >
       {{ item.label }}
@@ -27,6 +29,7 @@
       v-for="item in items"
       :key="item.label"
       :type="item.type"
+      :color="item.color"
       effect="plain"
     >
       {{ item.label }}
@@ -42,6 +45,7 @@ import type { TagProps } from 'element-plus'
 type Item = { type: TagProps['type']; label: string }
 
 const items = ref<Array<Item>>([
+  // { color: '#f68a14', label: 'Tag 0' },
   { type: 'primary', label: 'Tag 1' },
   { type: 'success', label: 'Tag 2' },
   { type: 'info', label: 'Tag 3' },

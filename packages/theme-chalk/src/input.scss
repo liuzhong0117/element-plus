@@ -372,6 +372,7 @@
 
       @include e(wrapper) {
         padding: $border-width map.get($input-padding-horizontal, $size)-$border-width;
+        border-radius: map.get($input-border-radius, $size);
       }
 
       @include e(inner) {

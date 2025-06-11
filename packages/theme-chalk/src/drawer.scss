@@ -31,9 +31,10 @@ $directions: rtl, ltr, ttb, btt;
 
   &__header {
     align-items: center;
-    color: rgb(114, 118, 123);
+    color: getCssVar('text-color', 'primary');
+    font-size: getCssVar('font-size', 'large');
+    line-height: 28px;
     display: flex;
-    margin-bottom: 32px;
     padding: getCssVar('drawer-padding-primary');
     padding-bottom: 0;
     & > :first-child {
@@ -46,6 +47,7 @@ $directions: rtl, ltr, ttb, btt;
     flex: 1;
     line-height: inherit;
     font-size: 16px;
+    font-weight: 600;
   }
 
   @include e(footer) {
@@ -58,7 +60,7 @@ $directions: rtl, ltr, ttb, btt;
     display: inline-flex;
     border: none;
     cursor: pointer;
-    font-size: getCssVar('font-size-extra-large');
+    font-size: 20px;
     color: inherit;
     background-color: transparent;
     outline: none;

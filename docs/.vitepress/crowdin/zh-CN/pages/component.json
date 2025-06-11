@@ -128,6 +128,11 @@
       {
         "link": "/tag",
         "text": "Tag 标签"
+      },
+      {
+        "link": "/segmented",
+        "text": "Segmented 分段控制器",
+        "promotion": "2.7.0"
       }
     ]
   },
@@ -158,6 +163,10 @@
       {
         "link": "/dialog",
         "text": "Dialog 对话框"
+      },
+      {
+        "link": "/drawer",
+        "text": "Drawer 抽屉"
       },
       {
         "link": "/loading",

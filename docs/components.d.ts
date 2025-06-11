@@ -183,6 +183,7 @@ declare module 'vue' {
     VpSponsorSmall: typeof import('./.vitepress/vitepress/components/vp-sponsor-small.vue')['default']
     VpSubnav: typeof import('./.vitepress/vitepress/components/vp-subnav.vue')['default']
     VpTableOfContent: typeof import('./.vitepress/vitepress/components/doc-content/vp-table-of-content.vue')['default']
+    VpThemeColor: typeof import('./.vitepress/vitepress/components/navbar/vp-theme-color.vue')['default']
     VpThemeToggler: typeof import('./.vitepress/vitepress/components/navbar/vp-theme-toggler.vue')['default']
     VpTranslation: typeof import('./.vitepress/vitepress/components/navbar/vp-translation.vue')['default']
   }

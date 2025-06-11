@@ -2,7 +2,7 @@
   <span
     v-if="disableTransitions"
     :class="containerKls"
-    :style="{ backgroundColor: color }"
+    :style="styles"
     @click="handleClick"
   >
     <span :class="ns.e('content')">
@@ -14,7 +14,7 @@
   <transition v-else :name="`${ns.namespace.value}-zoom-in-center`" appear>
     <span
       :class="containerKls"
-      :style="{ backgroundColor: color }"
+      :style="styles"
       @click="handleClick"
     >
       <span :class="ns.e('content')">
@@ -34,7 +34,7 @@ import { useNamespace } from '@element-plus/hooks'
 import { useFormSize } from '@element-plus/components/form'
 
 import { tagEmits, tagProps } from './tag'
-
+import { TinyColor } from '@ctrl/tinycolor'
 defineOptions({
   name: 'ElTag',
 })
@@ -55,6 +55,19 @@ const containerKls = computed(() => {
     ns.is('round', round),
   ]
 })
+
+const tagColor = props.color 
+const effect = props.effect
+let color = new TinyColor(tagColor)
+// const activeBgColor = color.tint(90).toString()
+const light5 = color.tint(50).toString()
+const light9 = color.tint(90).toString()
+// const light3 = color.tint(30).toString()
+const styles = tagColor ? ns.cssVarBlock({
+                'bg-color': effect == 'dark' ? tagColor : effect == 'plain' ? '#fff' : light9,
+                'border-color': effect == 'dark' ? tagColor : light5,
+                'text-color': effect !== 'dark' ? tagColor : ''
+              }) : {}
 
 // methods
 const handleClose = (event: MouseEvent) => {
