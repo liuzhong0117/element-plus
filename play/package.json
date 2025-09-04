@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@ulearning/element-plus": "0.0.8-beta.4",
     "vue": "^3.2.37"
   },
   "devDependencies": {

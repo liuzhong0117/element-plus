@@ -30,7 +30,7 @@
               class="d-arrow-left"
               @click="leftPrevYear"
             >
-            <el-icon icon="icon-chevron-left-double"></el-icon>
+              <el-icon><d-arrow-left /></el-icon>
             </button>
             <button
               v-if="unlinkPanels"
@@ -43,7 +43,7 @@
               class="d-arrow-right"
               @click="leftNextYear"
             >
-              <el-icon icon="icon-chevron-right-double"></el-icon>
+              <el-icon><d-arrow-right /></el-icon>
             </button>
             <div>{{ leftLabel }}</div>
           </div>
@@ -69,7 +69,7 @@
               class="d-arrow-left"
               @click="rightPrevYear"
             >
-            <el-icon icon="icon-chevron-left-double"></el-icon>
+              <el-icon><d-arrow-left /></el-icon>
             </button>
             <button
               type="button"
@@ -77,7 +77,7 @@
               class="d-arrow-right"
               @click="rightNextYear"
             >
-              <el-icon icon="icon-chevron-right-double"></el-icon>
+              <el-icon><d-arrow-right /></el-icon>
             </button>
             <div>{{ rightLabel }}</div>
           </div>
@@ -103,6 +103,7 @@ import { computed, inject, ref, toRef } from 'vue'
 import dayjs from 'dayjs'
 import ElIcon from '@element-plus/components/icon'
 import { useLocale } from '@element-plus/hooks'
+import { DArrowLeft, DArrowRight } from '@element-plus/icons-vue'
 import {
   panelMonthRangeEmits,
   panelMonthRangeProps,

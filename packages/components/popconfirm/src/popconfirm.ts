@@ -1,4 +1,5 @@
 import { buttonTypes } from '@element-plus/components/button'
+import { QuestionFilled } from '@element-plus/icons-vue'
 import { buildProps, iconPropType } from '@element-plus/utils'
 import { useTooltipContentProps } from '@element-plus/components/tooltip'
 import type { ExtractPropTypes } from 'vue'
@@ -38,7 +39,7 @@ export const popconfirmProps = buildProps({
    */
   icon: {
     type: iconPropType,
-    default: () => 'icon-info-fill',
+    default: () => QuestionFilled,
   },
   /**
    * @description Icon color

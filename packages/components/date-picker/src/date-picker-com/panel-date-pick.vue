@@ -71,7 +71,7 @@
               :class="ppNs.e('icon-btn')"
               @click="moveByYear(false)"
             >
-            <el-icon icon="icon-chevron-left-double"></el-icon>
+              <el-icon><d-arrow-left /></el-icon>
             </button>
             <button
               v-show="currentView === 'date'"
@@ -81,7 +81,7 @@
               class="arrow-left"
               @click="moveByMonth(false)"
             >
-            <el-icon icon="icon-chevron-left"></el-icon>
+              <el-icon><arrow-left /></el-icon>
             </button>
           </span>
           <span
@@ -115,7 +115,7 @@
               class="arrow-right"
               @click="moveByMonth(true)"
             >
-            <el-icon icon="icon-chevron-right"></el-icon>
+              <el-icon><arrow-right /></el-icon>
             </button>
             <button
               type="button"
@@ -124,7 +124,7 @@
               class="d-arrow-right"
               @click="moveByYear(true)"
             >
-            <el-icon icon="icon-chevron-right-double"></el-icon>
+              <el-icon><d-arrow-right /></el-icon>
             </button>
           </span>
         </div>
@@ -208,7 +208,12 @@ import {
 import { ElIcon } from '@element-plus/components/icon'
 import { isArray, isFunction } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
-
+import {
+  ArrowLeft,
+  ArrowRight,
+  DArrowLeft,
+  DArrowRight,
+} from '@element-plus/icons-vue'
 import { TOOLTIP_INJECTION_KEY } from '@element-plus/components/tooltip'
 import { panelDatePickProps } from '../props/panel-date-pick'
 import DateTable from './basic-date-table.vue'

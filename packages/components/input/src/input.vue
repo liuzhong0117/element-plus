@@ -25,8 +25,8 @@
         <span v-if="$slots.prefix || prefixIcon" :class="nsInput.e('prefix')">
           <span :class="nsInput.e('prefix-inner')">
             <slot name="prefix" />
-            <el-icon v-if="prefixIcon" :class="nsInput.e('icon')" :icon="prefixIcon">
-              <!-- <component :is="prefixIcon" /> -->
+            <el-icon v-if="prefixIcon" :class="nsInput.e('icon')">
+              <component :is="prefixIcon" />
             </el-icon>
           </span>
         </span>
@@ -65,8 +65,8 @@
               v-if="!showClear || !showPwdVisible || !isWordLimitVisible"
             >
               <slot name="suffix" />
-              <el-icon v-if="suffixIcon" :class="nsInput.e('icon')" :icon="suffixIcon">
-                <!-- <component :is="suffixIcon" /> -->
+              <el-icon v-if="suffixIcon" :class="nsInput.e('icon')">
+                <component :is="suffixIcon" />
               </el-icon>
             </template>
             <el-icon
@@ -74,17 +74,15 @@
               :class="[nsInput.e('icon'), nsInput.e('clear')]"
               @mousedown.prevent="NOOP"
               @click="clear"
-              icon="icon-x-circle"
             >
-              <!-- <circle-close /> -->
+              <circle-close />
             </el-icon>
             <el-icon
               v-if="showPwdVisible"
-              :icon="passwordIcon"
               :class="[nsInput.e('icon'), nsInput.e('password')]"
               @click="handlePasswordVisible"
             >
-              <!-- <component :is="passwordIcon" /> -->
+              <component :is="passwordIcon" />
             </el-icon>
             <span v-if="isWordLimitVisible" :class="nsInput.e('count')">
               <span :class="nsInput.e('count-inner')">
@@ -98,9 +96,8 @@
                 nsInput.e('validateIcon'),
                 nsInput.is('loading', validateState === 'validating'),
               ]"
-              icon="icon-check-circle"
             >
-              <!-- <component :is="validateIcon" /> -->
+              <component :is="validateIcon" />
             </el-icon>
           </span>
         </span>
@@ -166,6 +163,11 @@ import {
 import { useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
 import { ElIcon } from '@element-plus/components/icon'
+import {
+  CircleClose,
+  Hide as IconHide,
+  View as IconView,
+} from '@element-plus/icons-vue'
 import {
   useFormDisabled,
   useFormItem,
@@ -277,7 +279,7 @@ const validateIcon = computed(
   () => validateState.value && ValidateComponentsMap[validateState.value]
 )
 const passwordIcon = computed(() =>
-  passwordVisible.value ? 'icon-eye' : 'icon-eye-off'
+  passwordVisible.value ? IconView : IconHide
 )
 const containerStyle = computed<StyleValue>(() => [
   rawAttrs.style as StyleValue,

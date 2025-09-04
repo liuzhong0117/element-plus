@@ -7,6 +7,7 @@ import {
   ref,
   watch,
 } from 'vue'
+import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
 import {
   buildProps,
   debugWarn,
@@ -124,7 +125,7 @@ export const paginationProps = buildProps({
    */
   prevIcon: {
     type: iconPropType,
-    default: () => 'icon-chevron-left',
+    default: () => ArrowLeft,
   },
   /**
    * @description text for the next button
@@ -138,7 +139,7 @@ export const paginationProps = buildProps({
    */
   nextIcon: {
     type: iconPropType,
-    default: () => 'icon-chevron-right',
+    default: () => ArrowRight,
   },
   /**
    * @description whether Pagination size is teleported to body

@@ -22,6 +22,7 @@ import {
 } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
 import { ElIcon } from '@element-plus/components/icon'
+import { ArrowLeft, ArrowRight, Close } from '@element-plus/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import TabBar from './tab-bar.vue'
 import { tabsRootContextKey } from './constants'
@@ -271,27 +272,29 @@ const TabNav = defineComponent({
     return () => {
       const scrollBtn = scrollable.value
         ? [
-          <span
-            class={[
-              ns.e('nav-prev'),
-              ns.is('disabled', !scrollable.value.prev),
-            ]}
-            onClick={scrollPrev}
-          >
-            <ElIcon icon='icon-chevron-left'>
-            </ElIcon>
-          </span>,
-          <span
-            class={[
-              ns.e('nav-next'),
-              ns.is('disabled', !scrollable.value.next),
-            ]}
-            onClick={scrollNext}
-          >
-            <ElIcon icon='icon-chevron-right'>
-            </ElIcon>
-          </span>,
-        ]
+            <span
+              class={[
+                ns.e('nav-prev'),
+                ns.is('disabled', !scrollable.value.prev),
+              ]}
+              onClick={scrollPrev}
+            >
+              <ElIcon>
+                <ArrowLeft />
+              </ElIcon>
+            </span>,
+            <span
+              class={[
+                ns.e('nav-next'),
+                ns.is('disabled', !scrollable.value.next),
+              ]}
+              onClick={scrollNext}
+            >
+              <ElIcon>
+                <ArrowRight />
+              </ElIcon>
+            </span>,
+          ]
         : null
 
       const tabs = props.panes.map((pane, index) => {
@@ -308,8 +311,8 @@ const TabNav = defineComponent({
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             onClick={(ev: MouseEvent) => emit('tabRemove', pane, ev)}
-            icon="icon-x-close"
           >
+            <Close />
           </ElIcon>
         ) : null
 

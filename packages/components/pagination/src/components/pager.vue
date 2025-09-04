@@ -23,10 +23,8 @@
       @focus="onFocus(true)"
       @blur="quickPrevFocus = false"
     >
-      <!-- <d-arrow-left v-if="(quickPrevHover || quickPrevFocus) && !disabled" />
-      <more-filled v-else /> -->
-      <el-icon v-if="(quickPrevHover || quickPrevFocus) && !disabled"  icon="icon-chevron-left-double"></el-icon>
-      <el-icon v-else icon="icon-dots-horizontal-new"></el-icon>
+      <d-arrow-left v-if="(quickPrevHover || quickPrevFocus) && !disabled" />
+      <more-filled v-else />
     </li>
     <li
       v-for="pager in pagers"
@@ -52,9 +50,8 @@
       @focus="onFocus()"
       @blur="quickNextFocus = false"
     >
-      <!-- <d-arrow-right v-if="(quickNextHover || quickNextFocus) && !disabled" /> -->
-      <el-icon v-if="(quickNextHover || quickNextFocus) && !disabled"  icon="icon-chevron-right-double"></el-icon>
-      <el-icon v-else icon="icon-dots-horizontal-new"></el-icon>
+      <d-arrow-right v-if="(quickNextHover || quickNextFocus) && !disabled" />
+      <more-filled v-else />
     </li>
     <li
       v-if="pageCount > 1"
@@ -73,6 +70,7 @@
 </template>
 <script lang="ts" setup>
 import { computed, ref, watchEffect } from 'vue'
+import { DArrowLeft, DArrowRight, MoreFilled } from '@element-plus/icons-vue'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { paginationPagerProps } from './pager'
 defineOptions({

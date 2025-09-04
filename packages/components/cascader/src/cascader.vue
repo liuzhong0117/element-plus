@@ -54,18 +54,18 @@
             <el-icon
               v-if="clearBtnVisible"
               key="clear"
-              icon="icon-x-circle"
               :class="[nsInput.e('icon'), 'icon-circle-close']"
               @click.stop="handleClear"
             >
+              <circle-close />
             </el-icon>
             <el-icon
               v-else
               key="arrow-down"
               :class="cascaderIconKls"
-              icon="icon-chevron-down"
               @click.stop="togglePopperVisible()"
             >
+              <arrow-down />
             </el-icon>
           </template>
         </el-input>
@@ -182,7 +182,8 @@
             @click="handleSuggestionClick(item)"
           >
             <span>{{ item.text }}</span>
-            <el-icon v-if="item.checked" icon="icon-check">
+            <el-icon v-if="item.checked">
+              <check />
             </el-icon>
           </li>
         </template>
@@ -221,6 +222,7 @@ import {
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
 } from '@element-plus/constants'
+import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
 import { cascaderEmits, cascaderProps } from './cascader'
 
 import type { Options } from '@element-plus/components/popper'

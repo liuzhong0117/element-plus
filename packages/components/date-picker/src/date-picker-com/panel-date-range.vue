@@ -62,7 +62,7 @@
             </span>
           </span>
           <span>
-            <el-icon icon="icon-chevron-right"></el-icon>
+            <el-icon><arrow-right /></el-icon>
           </span>
           <span :class="drpNs.e('editors-wrap')" class="is-right">
             <span :class="drpNs.e('time-picker-wrap')">
@@ -113,7 +113,7 @@
               class="d-arrow-left"
               @click="leftPrevYear"
             >
-              <el-icon icon="icon-chevron-left-double"></el-icon>
+              <el-icon><d-arrow-left /></el-icon>
             </button>
             <button
               type="button"
@@ -122,7 +122,7 @@
               class="arrow-left"
               @click="leftPrevMonth"
             >
-            <el-icon icon="icon-chevron-left"></el-icon>
+              <el-icon><arrow-left /></el-icon>
             </button>
             <button
               v-if="unlinkPanels"
@@ -133,7 +133,7 @@
               class="d-arrow-right"
               @click="leftNextYear"
             >
-              <el-icon icon="icon-chevron-right-double"></el-icon>
+              <el-icon><d-arrow-right /></el-icon>
             </button>
             <button
               v-if="unlinkPanels"
@@ -147,7 +147,7 @@
               class="arrow-right"
               @click="leftNextMonth"
             >
-              <el-icon icon="icon-chevron-right"></el-icon>
+              <el-icon><arrow-right /></el-icon>
             </button>
             <div>{{ leftLabel }}</div>
           </div>
@@ -175,7 +175,7 @@
               class="d-arrow-left"
               @click="rightPrevYear"
             >
-              <el-icon icon="icon-chevron-left-double"></el-icon>
+              <el-icon><d-arrow-left /></el-icon>
             </button>
             <button
               v-if="unlinkPanels"
@@ -189,7 +189,7 @@
               class="arrow-left"
               @click="rightPrevMonth"
             >
-              <el-icon icon="icon-chevron-left"></el-icon>
+              <el-icon><arrow-left /></el-icon>
             </button>
             <button
               type="button"
@@ -198,7 +198,7 @@
               class="d-arrow-right"
               @click="rightNextYear"
             >
-              <el-icon icon="icon-chevron-right-double"></el-icon>
+              <el-icon><d-arrow-right /></el-icon>
             </button>
             <button
               type="button"
@@ -207,7 +207,7 @@
               class="arrow-right"
               @click="rightNextMonth"
             >
-              <el-icon icon="icon-chevron-right"></el-icon>
+              <el-icon><arrow-right /></el-icon>
             </button>
             <div>{{ rightLabel }}</div>
           </div>
@@ -263,7 +263,12 @@ import {
   extractTimeFormat,
 } from '@element-plus/components/time-picker'
 import ElIcon from '@element-plus/components/icon'
-
+import {
+  ArrowLeft,
+  ArrowRight,
+  DArrowLeft,
+  DArrowRight,
+} from '@element-plus/icons-vue'
 import { panelDateRangeProps } from '../props/panel-date-range'
 import { useRangePicker } from '../composables/use-range-picker'
 import { getDefaultValue, isValidRange } from '../utils'

@@ -8,7 +8,8 @@
       :style="fitStyle"
       @error="handleError"
     />
-    <el-icon v-else-if="icon" :icon="icon">
+    <el-icon v-else-if="icon">
+      <component :is="icon" />
     </el-icon>
     <slot v-else />
   </span>

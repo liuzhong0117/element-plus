@@ -66,9 +66,8 @@
             :class="nsInput.e('icon')"
             @mousedown.prevent="onMouseDownInput"
             @touchstart.passive="onTouchStartInput"
-            :icon="triggerIcon"
           >
-            <!-- <component :is="triggerIcon" /> -->
+            <component :is="triggerIcon" />
           </el-icon>
         </template>
         <template #suffix>
@@ -76,9 +75,8 @@
             v-if="showClose && clearIcon"
             :class="`${nsInput.e('icon')} clear-icon`"
             @click.stop="onClearIconClick"
-            :icon="clearIcon"
           >
-            <!-- <component :is="clearIcon" /> -->
+            <component :is="clearIcon" />
           </el-icon>
         </template>
       </el-input>
@@ -98,9 +96,8 @@
           :class="[nsInput.e('icon'), nsRange.e('icon')]"
           @mousedown.prevent="onMouseDownInput"
           @touchstart.passive="onTouchStartInput"
-          :icon="triggerIcon"
         >
-          <!-- <component :is="triggerIcon" /> -->
+          <component :is="triggerIcon" />
         </el-icon>
         <input
           :id="id && id[0]"
@@ -139,9 +136,8 @@
           v-if="clearIcon"
           :class="clearIconKls"
           @click="onClearIconClick"
-          :icon="clearIcon"
         >
-          <!-- <component :is="clearIcon" /> -->
+          <component :is="clearIcon" />
         </el-icon>
       </div>
     </template>
@@ -192,6 +188,7 @@ import ElIcon from '@element-plus/components/icon'
 import ElTooltip from '@element-plus/components/tooltip'
 import { debugWarn, isArray } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
+import { Calendar, Clock } from '@element-plus/icons-vue'
 import { formatter, parseDate, valueEquals } from '../utils'
 import { timePickerDefaultProps } from './props'
 
@@ -507,7 +504,7 @@ const isMonthsPicker = computed(() => props.type === 'months')
 const isYearsPicker = computed(() => props.type === 'years')
 
 const triggerIcon = computed(
-  () => props.prefixIcon || (isDateLikePicker.value ? 'icon-Calendar-new' : 'icon-clock-new')
+  () => props.prefixIcon || (isDateLikePicker.value ? Calendar : Clock)
 )
 
 const showClose = ref(false)

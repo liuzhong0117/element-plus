@@ -77,14 +77,12 @@
         ]"
         @click="showFilterPanel"
       >
-        <!-- <el-icon>
+        <el-icon>
           <slot name="filter-icon">
             <arrow-up v-if="column.filterOpened" />
             <arrow-down v-else />
           </slot>
-        </el-icon> -->
-        <el-icon v-if="column.filterOpened" icon="icon-chevron-up"></el-icon>
-        <el-icon v-else icon="icon-chevron-down"></el-icon>
+        </el-icon>
       </span>
     </template>
   </el-tooltip>

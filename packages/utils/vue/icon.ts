@@ -1,4 +1,6 @@
 import {
+  CircleCheck,
+  CircleClose,
   CircleCloseFilled,
   Close,
   InfoFilled,
@@ -29,15 +31,14 @@ export const TypeComponents = {
 }
 
 export const TypeComponentsMap = {
-  success: 'icon-check-circle-fill',
-  warning: 'icon-alert-triangle-fill',
-  error: 'icon-x-circle-fill',
-  info: 'icon-info-fill',
-  primary: 'icon-info-fill'
+  success: SuccessFilled,
+  warning: WarningFilled,
+  error: CircleCloseFilled,
+  info: InfoFilled,
 }
 
 export const ValidateComponentsMap = {
   validating: Loading,
-  success: 'icon-check-circle',
-  error: 'icon-x-circle',
+  success: CircleCheck,
+  error: CircleClose,
 }

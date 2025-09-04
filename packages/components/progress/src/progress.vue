@@ -73,7 +73,8 @@
     >
       <slot :percentage="percentage">
         <span v-if="!status">{{ content }}</span>
-        <el-icon v-else :icon="statusIcon">
+        <el-icon v-else>
+          <component :is="statusIcon" />
         </el-icon>
       </slot>
     </div>
@@ -83,6 +84,13 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { ElIcon } from '@element-plus/components/icon'
+import {
+  Check,
+  CircleCheck,
+  CircleClose,
+  Close,
+  WarningFilled,
+} from '@element-plus/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import { isFunction, isString } from '@element-plus/utils'
 import { progressProps } from './progress'
@@ -178,9 +186,13 @@ const stroke = computed(() => {
 
 const statusIcon = computed(() => {
   if (props.status === 'warning') {
-    return 'icon-warning-fill'
+    return WarningFilled
   }
-  return props.status === 'success' ? 'icon-check-circle' : 'icon-x-circle'
+  if (props.type === 'line') {
+    return props.status === 'success' ? CircleCheck : CircleClose
+  } else {
+    return props.status === 'success' ? Check : Close
+  }
 })
 
 const progressTextSize = computed(() => {

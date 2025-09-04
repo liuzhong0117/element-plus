@@ -4,6 +4,7 @@ import {
   useEmptyValuesProps,
   useSizeProp,
 } from '@element-plus/hooks'
+import { CircleClose } from '@element-plus/icons-vue'
 import { disabledTimeListsProps } from '../props/shared'
 
 import type { Component, ExtractPropTypes } from 'vue'
@@ -85,7 +86,7 @@ export const timePickerDefaultProps = buildProps({
    */
   clearIcon: {
     type: definePropType<string | Component>([String, Object]),
-    default: 'icon-x-circle',
+    default: CircleClose,
   },
   /**
    * @description whether the input is editable

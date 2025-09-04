@@ -14,8 +14,7 @@
       </el-icon>
     </template>
     <el-icon v-else-if="icon || $slots.icon">
-      <!-- <component :is="icon" v-if="icon" /> -->
-       <el-icon :icon="icon" v-if="icon"></el-icon>
+      <component :is="icon" v-if="icon" />
       <slot v-else name="icon" />
     </el-icon>
     <span
@@ -28,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, useSlots } from 'vue'
+import { computed } from 'vue'
 import { ElIcon } from '@element-plus/components/icon'
 import { useNamespace } from '@element-plus/hooks'
 import { useButton } from './use-button'
@@ -40,7 +39,6 @@ defineOptions({
 })
 
 const props = defineProps(buttonProps)
-const slots = useSlots();
 const emit = defineEmits(buttonEmits)
 
 const buttonStyle = useButtonCustomStyle(props)

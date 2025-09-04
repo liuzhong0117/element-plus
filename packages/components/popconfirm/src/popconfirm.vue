@@ -20,8 +20,8 @@
             v-if="!hideIcon && icon"
             :class="ns.e('icon')"
             :style="{ color: iconColor }"
-            :icon="icon"
           >
+            <component :is="icon" />
           </el-icon>
           {{ title }}
         </div>

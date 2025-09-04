@@ -39,9 +39,7 @@
         @blur="isFocused = false"
         @click.stop
       />
-      <span :class="ns.e('inner')">
-        <el-icon icon="icon-check"></el-icon>
-      </span>
+      <span :class="ns.e('inner')" />
     </span>
     <span v-if="hasOwnLabel" :class="ns.e('label')">
       <slot />
@@ -79,6 +77,7 @@ const {
 } = useCheckbox(props, slots)
 
 const ns = useNamespace('checkbox')
+
 const compKls = computed(() => {
   return [
     ns.b(),
