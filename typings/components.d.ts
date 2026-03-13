@@ -1,4 +1,7 @@
-declare module 'vue' {
+// For this project development
+import '@vue/runtime-core'
+
+declare module '@vue/runtime-core' {
   // GlobalComponents for Volar
   export interface GlobalComponents {
     ElAffix: typeof import('../packages/element-plus')['ElAffix']
@@ -45,6 +48,7 @@ declare module 'vue' {
     ElImageViewer: typeof import('../packages/element-plus')['ElImageViewer']
     ElInput: typeof import('../packages/element-plus')['ElInput']
     ElInputNumber: typeof import('../packages/element-plus')['ElInputNumber']
+    ElInputTag: typeof import('../packages/element-plus')['ElInputTag']
     ElLink: typeof import('../packages/element-plus')['ElLink']
     ElMain: typeof import('../packages/element-plus')['ElMain']
     ElMenu: typeof import('../packages/element-plus')['ElMenu']
@@ -101,6 +105,7 @@ declare module 'vue' {
     ElAnchor: typeof import('../packages/element-plus')['ElAnchor']
     ElAnchorLink: typeof import('../packages/element-plus')['ElAnchorLink']
     ElSegmented: typeof import('../packages/element-plus')['ElSegmented']
+    ElMention: typeof import('../packages/element-plus')['ElMention']
   }
 
   interface ComponentCustomProperties {
@@ -115,4 +120,4 @@ declare module 'vue' {
   }
 }
 
-export {}
+export { }
